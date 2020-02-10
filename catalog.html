@@ -61,6 +61,40 @@
       <h1>Перфораторы</h1>
 
       <!-- Форма фильтрации -->
+      <form action="#" method="get">
+        <fieldset>
+          <legend>Производители:</legend>
+          <ul>
+            <li>
+              <label><input type="checkbox" name="bosch" checked>Bosch</label>
+            </li>
+            <li>
+              <label><input type="checkbox" name="interskol">Интерскол</label>
+            </li>
+            <li>
+              <label><input type="checkbox" name="makita" checked>Makita</label>
+            </li>
+            <li>
+              <label><input type="checkbox" name="dewalt">Dewalt</label>
+            </li>
+            <li>
+              <label><input type="checkbox" name="hitachi">Hitachi</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>Питание:</legend>
+          <ul>
+            <li>
+              <label><input type="radio" name="power" checked>аккумуляторные</label>
+            </li>
+            <li>
+              <label><input type="radio" name="power">сетевые</label>
+            </li>
+          </ul>
+        </fieldset>
+        <button type="submit">Показать</button>
+      </form>
 
       <p>Сортировка</p>
       <ul>
