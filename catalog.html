@@ -63,6 +63,25 @@
 
       <!-- Форма фильтрации -->
       <form action="https://echo.htmlacademy.ru" method="get">
+        <p>Фильтр:</p>
+        <fieldset>
+          <legend>Цена:</legend>
+          <div class="slider-range">
+            <div class="range-track">
+              <div class="range-pin range-pin-min" id="min_pin"></div>
+              <div class="range-pin range-pin-max" id="max_pin"></div>
+              <!-- 2 крайних серых и центральный зелёный индикаторы диапазона: -->
+              <div class="range-progress"></div>
+              <div class="range-progress range-progress-central"></div>
+              <div class="range-progress"></div>
+            </div>
+            <!-- поля для ввода мин. и макс. цен: -->
+            <label class="visually-hidden" for="min_price">От</label>
+            <input type="text" id="min_price" name="min_price" value="0">
+            <label class="visually-hidden" for="max_price">До</label>
+            <input type="text" id="max_price" name="max_price" value="30000">
+          </div>
+        </fieldset>
         <fieldset>
           <legend>Производители:</legend>
           <ul>
