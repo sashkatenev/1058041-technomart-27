@@ -1,0 +1,17 @@
+/* General rules */
+body {
+  margin: 0;
+  padding: 0;
+  
+  font-family: "Cuprum", Arial, sans-serif;
+  color: #32425c;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
