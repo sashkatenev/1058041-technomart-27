@@ -8,39 +8,41 @@
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans+Narrow:400,700&display=swap&subset=cyrillic" rel="stylesheet">
   </head>
   <body>
-    <header>
-      <div>   <!-- topmenu -->
-        <div>
-          <a><img src="img/main-logo.svg" alt="Техномарт" width="109" height="19"></a>
-          <!-- Форма поиска -->
-          <form action="https://echo.htmlacademy.ru" method="get">
-            <p>
-              <label class="visually-hidden" for="search">Поиск</label>
-              <input type="search" id="search" name="search_string" placeholder="Поиск:">
-            </p>
-            <p>
-              <button type="submit">Поиск</button>
-            </p>
-          </form>
-          <a href="#">Закладки: 0</a>
-          <a href="#">Корзина: 0</a>
-          <a href="#">Оформить заказ</a>
-        </div>
-
-        <p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
-
-        <p>
+    <header class="main-header">
+      <div class="head-bar">
+        <a class="main-header-logo site-button"><img src="img/main-logo.svg" alt="Техномарт" width="109" height="19"></a>
+        <form class="form-search" action="https://echo.htmlacademy.ru" method="get">
+          <p>
+            <label class="visually-hidden" for="search">Поиск</label>
+            <input class="head-button" type="search" id="search" name="search_string" placeholder="Поиск:">
+            <button class="head-button head-button-search" type="submit"></button>
+          </p>
+        </form>
+        <a class="head-button head-button-bookmark" href="#">Закладки: 0</a>
+        <a class="head-button head-button-cart" href="#">Корзина: 0</a>
+        <a class="head-button head-button-order" href="#">Оформить заказ</a>
+      </div>
+      <div class="header-content">
+        <p class="header-title">Интернет-магазин строительных материалов и инструментов для ремонта</p>
+        <div class="header-contacts">
           <a href="tel:+78125550555">+7 (812) 555-05-55</a>
           <address>г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8</address>
-        </p>
-
-        <div>
-          <a href="#">Войти</a>
-          <a href="#">Регистрация</a>
+        </div>
+        <div class="user-navigation">
+          <a class="user-button user-button-log-in" id="user-log-in" href="#">Войти</a>
+          <a class="user-button" id="user-registration" href="#">Регистрация</a>
+        </div>
+        <div class="user-navigation user-navigation-hidden">
+          <a class="user-button user-button-profile" id="user-profile" href="#">Равшан Джамшутович</a>
+          <a class="user-button user-button-log-out" id="user-log-out" href="#">Выйти</a>
+          <ul class="user-links">
+            <li><a href="#">Мои заказы</a></li>
+            <li><a href="#">Личный кабинет</a></li>
+          </ul>
         </div>
       </div>
 
-      <nav>    <!-- mainmenu -->
+      <nav class="site-navigation">
         <ul>
           <li><a>Главная</a></li>
           <li><a href="#">Компания</a></li>
