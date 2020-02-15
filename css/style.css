@@ -42,6 +42,7 @@ img {
 }
 
 .site-paragraph {
+  font-family: "PT Sans Narrow", Arial, sans-serif;
   font-size: 13px;
   line-height: 1.85;
   color: #000000;
@@ -142,8 +143,11 @@ img {
 }
 
 .site-button {
-  text-transform: uppercase;
+  color: #ffffff;
+
   background-color: #ee3643;
+
+  text-transform: uppercase;
 }
 
 .site-button:hover {
@@ -237,4 +241,20 @@ img {
   color: rgba(255, 255, 255, 0.5);
 
   background-color: #1d2739;
+}
+
+/* section About company*/
+.main-company {
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+.company-description__partners li {
+  padding-left: 2px;
+
+  font-size: 18px;
+  line-height: 1.11;
+
+  list-style-image: url("../img/icon-bullet-marker.svg");
 }
