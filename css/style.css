@@ -4,6 +4,8 @@ body {
   padding: 0;
   
   font-family: "Cuprum", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
   text-align: left;
   color: #32425c;
 }
@@ -33,6 +35,18 @@ img {
   overflow: hidden;
 }
 
+.site-section__title {
+  font-size: 30px;
+  line-height: 1;
+  color: #000000;
+}
+
+.site-paragraph {
+  font-size: 13px;
+  line-height: 1.85;
+  color: #000000;
+}
+
 /* header */
 .main-header {
   background-color: #f1f5f7;
@@ -41,7 +55,7 @@ img {
     /* head-bar */
 .head-bar {
   font-size: 17px;
-  line-height: 18px;
+  line-height: 1.06;
   color: #ffffff;
   text-align: left;
 
@@ -144,7 +158,7 @@ img {
 .header-title {
   font-style: italic;
   font-size: 16px;
-  line-height: 23px;
+  line-height: 1.44;
   color: #ee3643;
 }
 
@@ -152,7 +166,7 @@ img {
   border: solid 3px #ffffff;
 
   font-size: 21px;
-  line-height: 21px;
+  line-height: 1;
   color: #e9292a;
 
   background-color: transparent;
@@ -160,7 +174,7 @@ img {
 
 .header-contacts address {
   font-size: 14px;
-  line-height: 24px;
+  line-height: 1.71;
   font-style: normal;
   text-align: center;
 }
@@ -171,7 +185,7 @@ img {
 
 .user-button {
   font-size: 21px;
-  line-height: 21px;
+  line-height: 1;
   color: #000000;
 
   background-color: #ffffff;
@@ -194,7 +208,7 @@ img {
 
 .user-links a {
   font-size: 16px;
-  line-height: normal;
+  line-height: 1.13;
   color: inherit;
 
   text-decoration: underline;
@@ -209,7 +223,7 @@ img {
 .site-navigation a {
   color: #ffffff;
   font-size: 17px;
-  line-height: 17px;
+  line-height: 1;
 
   background-color: #32425c;
   box-shadow: inset 0px -5px 0 0 #293449;
