@@ -177,7 +177,8 @@ img {
   background-color: #ffffff;
 }
 
-.user-button:hover {
+.user-button:hover,
+.user-links a:hover {
   color: #ee3643;
 }
 
@@ -186,7 +187,8 @@ img {
   color: #000000;
 }
 
-.user-button:active {
+.user-button:active,
+.user-links a:active {
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -196,14 +198,6 @@ img {
   color: inherit;
 
   text-decoration: underline;
-}
-
-.user-links a:hover {
-  color: #ee3643;
-}
-
-.user-links a:active {
-  color: rgba(0, 0, 0, 0.3);
 }
 
     /* site-navigation */
