@@ -15,6 +15,8 @@ a:focus {
 }
 
 a {
+  color: inherit;
+
   text-decoration: none;
 }
 
@@ -61,10 +63,6 @@ img {
   text-align: left;
 
   background-color: #293449;
-}
-
-.head-bar a {
-  color: #ffffff;
 }
 
 .main-header-logo {
@@ -213,7 +211,6 @@ img {
 .user-links a {
   font-size: 16px;
   line-height: 1.13;
-  color: inherit;
 
   text-decoration: underline;
 }
@@ -257,4 +254,82 @@ img {
   line-height: 1.11;
 
   list-style-image: url("../img/icon-bullet-marker.svg");
+}
+
+/* footer */
+.footer-navigation {
+  font-size: 19px;
+  line-height: 1.33;
+  color: #f1f5f7;
+
+  background-color: #32425c;
+}
+
+.footer-navigation__contacts address {
+  font-style: normal;
+}
+
+.main-footer ul {
+  list-style-type: none;
+}
+
+.footer-navigation__promo a,
+.footer-bar a {
+  color: #ffd180;
+}
+
+.main-footer a:hover {
+  text-decoration: underline;
+}
+
+.main-footer a:active,
+.footer-navigation__contacts a:hover {
+  text-decoration: none;
+}
+
+.footer-navigation__site a:active {
+  color: rgba(241, 245, 247, 0.5);
+}
+
+.footer-navigation__promo a:active {
+  color: rgba(255, 209, 128, 0.5);
+}
+
+.footer-bar {
+  font-size: 16px;
+  line-height: 1.13;
+  color: #ffffff;
+
+  background-color: #293449;
+}
+
+.footer-bar a:active {
+  color: #ee3643;
+}
+
+.footer-bar__socials a {
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+
+  background-color: #212a3a;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.footer-bar__socials a:hover {
+  background-color: #ee3643;
+}
+
+.socials-vk a {
+  background-image: url("../img/icon-vk.svg");
+}
+
+.socials-fb a {
+  background-image: url("../img/icon-fb.svg");
+}
+
+.socials-insta a {
+  background-image: url("../img/icon-insta.svg");
 }
