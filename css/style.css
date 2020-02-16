@@ -20,8 +20,12 @@ a {
   text-decoration: none;
 }
 
-img {
-  max-width: 100%;
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
 }
 
 .visually-hidden {
@@ -50,96 +54,7 @@ img {
   color: #000000;
 }
 
-/* header */
-.main-header {
-  background-color: #f1f5f7;
-}
-
-    /* head-bar */
-.head-bar {
-  font-size: 17px;
-  line-height: 1.06;
-  color: #ffffff;
-  text-align: left;
-
-  background-color: #293449;
-}
-
-.main-header-logo {
-  box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
-}
-
-.head-button {
-  vertical-align: middle;
-  
-  border: none;
-
-  color: #ffffff;
-
-  background-color: #293449;
-  background-position: 0 50%;  
-  background-repeat: no-repeat;
-
-  cursor: pointer;
-}
-
-.head-button:hover {
-  background-color: #212a3a;
-}
-
-.head-button:active {
-  color: rgba(255, 255, 255, 0.6);
-
-  background-color: #161d29;
-}
-
-  /* button Оформить заказ */
-.head-button-order {
-  background-color: #63a63e;
-}
-
-.head-button-order:hover {
-  background-color: #5fbb2d;
-}
-
-.head-button-order:active {
-  background-color: #518534;
-}
-
-.form-search input:focus {
-  color: #000000;
-
-  background-color: #ffffff;
-}
-
-.form-search button {
-  width: 17px;
-  height: 17px;
-}
-
-.head-button-search {
-  padding: 20px;
-
-  background-image: url("../img/icon-search.svg");
-}
-
-.head-button-search:hover {
-  background-position: -100px 50%;
-}
-
-.head-button-search:active {
-  background-position: 0 50%;
-}
-
-.head-button[type="search"]:focus + .head-button-search {
-  background-position: -200px 50%;
-}
-
-.head-button-bookmark {
-  padding-left: 20px;
-  background-image: url("../img/icon-bookmark.svg");
-}
-
+  /* red site-button */
 .site-button {
   color: #ffffff;
 
@@ -155,6 +70,150 @@ img {
 .site-button:active {
   background-color: #ba2732;
 }
+/* end of general-rules */
+
+/* header */
+.main-header {
+  background-color: #f1f5f7;
+}
+
+    /* head-bar */
+.head-bar {
+  font-size: 17px;
+  line-height: 1.06;
+  color: #ffffff;
+
+  background-color: #293449;
+}
+
+.main-header-logo {
+  box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
+}
+
+.head-button {
+  display: inline-block;
+  vertical-align: middle;
+
+  width: 150px;
+
+  border: none;
+
+  color: #ffffff;
+
+  background-color: #293449;
+  background-position-y: 50%;  
+  background-repeat: no-repeat;
+}
+
+.head-button:hover {
+  background-color: #212a3a;
+}
+
+.head-button:active {
+  color: rgba(255, 255, 255, 0.6);
+
+  background-color: #161d29;
+}
+
+    /* search-field */
+.form-search input {
+  width: 221px;
+  padding: 11px 0 12px;
+}
+
+.form-search input:focus {
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+    /* button Поиск */
+.head-button-search {
+  box-sizing: content-box;
+  width: 17px;
+  height: 17px;
+  padding: 12px 15px 13px 17px;
+
+  background-image: url("../img/icon-search.svg");
+  background-origin: content-box;
+
+  cursor: pointer;
+}
+
+.head-button-search:hover {
+  background-image: url("../img/icon-search-hover.svg");  /* white */
+}
+
+.head-button[type="search"]:focus + .head-button-search:not(:hover) {
+  background-color: #ffffff;
+  background-image: url("../img/icon-search-focus.svg");  /* red */
+}
+
+.head-button-search:active {
+  background-image: url("../img/icon-search.svg");  /* grey */
+}
+
+    /* link Закладки */
+.head-button-bookmark {
+  padding-left: 44px;
+
+  background-image: url("../img/icon-bookmark.svg");
+  background-position-x: 17px;
+}
+
+.head-button-bookmark:hover {
+  background-image: url("../img/icon-bookmark-hover.svg");
+}
+
+.head-button-bookmark:active {
+  background-image: url("../img/icon-bookmark-click.svg");
+}
+
+    /* link Корзина */
+.head-button-cart {
+  padding-left: 50px;
+
+  background-image: url("../img/icon-cart.svg");
+  background-position-x: 18px;
+}
+
+.head-button-cart:hover {
+  background-image: url("../img/icon-cart-hover.svg");
+}
+
+.head-button-cart:active {
+  background-image: url("../img/icon-cart-click.svg");
+}
+
+    /* button Оформить заказ */
+.head-button-order {
+  padding-right: 22px;
+  padding-left: 20px;
+  background-color: #63a63e;
+}
+
+.head-button-order:hover {
+  background-color: #5fbb2d;
+}
+
+.head-button-order:active {
+  color: rgba(255, 255, 255, 0.5);
+
+  background-color: #518534;
+}
+
+    /* bookmarks, cart if not empty (red-bg) */
+.not-empty {
+  background-color: #ee3643;
+}
+
+.not-empty:hover {
+  background-color: #ca2c37;
+}
+
+.not-empty:active {
+  background-color: #ba2732;
+}
 
     /* header-content */
 .header-title {
@@ -164,7 +223,10 @@ img {
   color: #ee3643;
 }
 
+    /* tel */
 .header-contacts a {
+  padding-right: 45px;
+  padding-left: 74px;
   border: solid 3px #ffffff;
 
   font-size: 21px;
@@ -172,6 +234,9 @@ img {
   color: #e9292a;
 
   background-color: transparent;
+  background-image: url("../img/icon-phone.svg");
+  background-repeat: no-repeat;
+  background-position: 15px 50%;
 }
 
 .header-contacts address {
@@ -191,6 +256,8 @@ img {
   color: #000000;
 
   background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position-y: 50%;
 }
 
 .user-button:hover,
@@ -208,14 +275,99 @@ img {
   color: rgba(0, 0, 0, 0.3);
 }
 
+    /* button Войти */
+.user-button-log-in {
+  padding-right: 27px;
+  padding-left: 48px;
+  margin-right: 10px;
+
+  background-image: url("../img/icon-login.svg");
+  background-position-x: 14px;
+}
+
+.user-button-log-in:hover {
+  background-image: url("../img/icon-login-hover.svg");
+}
+
+.user-button-log-in:active {
+  background-image: url("../img/icon-login.svg");
+}
+
+    /* button Регистрация */
+.user-button-registration {
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+    /* link Равшан Джамшутович */
+.user-button-profile {
+  padding-right: 27px;
+  padding-left: 47px;
+
+  background-image: url("../img/icon-user.svg");
+  background-position-x: 13px;
+}
+
+.user-button-profile:hover {
+  background-image: url("../img/icon-user-hover.svg");
+}
+
+.user-button-profile:active {
+  background-image: url("../img/icon-user.svg");
+}
+
+   /* exit-button */
+.user-button-log-out {
+  display: inline-block;  
+  box-sizing: content-box;
+  vertical-align: middle;
+  width: 20px;
+  height: 17px;
+  padding: 14px 10px;
+
+  background-image: url("../img/icon-logout.svg");
+  background-origin: content-box;
+}
+
+.user-button-log-out:hover {
+  background-image: url("../img/icon-logout-hover.svg");
+}
+
+.user-button-log-out:active {
+  background-image: url("../img/icon-logout.svg");
+}
+
 .user-links a {
+  padding-left: 15px;
   font-size: 16px;
   line-height: 1.13;
 
   text-decoration: underline;
 }
 
+    /* user-links-bullet */
+.user-links li {
+  position: relative;
+}
+
+.user-links li:not(:first-child)::before {
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+
+  content: "";
+
+  background-color: #32425c;
+}
+
     /* site-navigation */
+.site-navigation li {
+  cursor: default;
+}
+
 .user-links,
 .site-navigation ul {
   list-style-type: none;
