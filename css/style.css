@@ -401,8 +401,8 @@ html {
   background-color: #ffffff;
 }
 
-  /* bread crumbs */
-.breadcrumbs {
+  /* Catalog bread crumbs */
+.content-breadcrumbs {
   position: relative;
 
   font-family: "PT Sans Narrow", Arial, sans-serif;
@@ -415,11 +415,11 @@ html {
   list-style-type: none;
 }
 
-.breadcrumbs li {
+.content-breadcrumbs li {
   display: inline-block;
 }
 
-.breadcrumbs li:not(:last-child)::after {
+.content-breadcrumbs li:not(:last-child)::after {
   content: url("../img/icon-right-small.svg");
 
   padding-right: 15px;
@@ -427,6 +427,20 @@ html {
 
   width: 8px;
   height: 12px;
+}
+
+.content-title {
+  padding-top: 32px;
+  padding-bottom: 34px;
+  padding-left: 30px;
+  margin: 0;
+
+  font-size: 30px;
+  line-height: 1;
+
+  background-color: #f2f6f8;
+
+  text-transform: uppercase;
 }
 
 /* section About company*/
