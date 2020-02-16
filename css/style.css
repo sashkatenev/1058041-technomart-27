@@ -338,6 +338,7 @@ html {
 }
 
 .user-links a {
+  padding-right: 14px;
   padding-left: 15px;
   font-size: 16px;
   line-height: 1.13;
@@ -348,6 +349,7 @@ html {
     /* user-links-bullet */
 .user-links li {
   position: relative;
+  display: inline-block;
 }
 
 .user-links li:not(:first-child)::before {
@@ -365,6 +367,8 @@ html {
 
     /* site-navigation */
 .site-navigation li {
+  display: inline-block;
+
   cursor: default;
 }
 
@@ -456,6 +460,10 @@ html {
 
 .main-footer ul {
   list-style-type: none;
+}
+
+.main-footer li {
+  display: inline-block;
 }
 
 .footer-navigation__promo a,
