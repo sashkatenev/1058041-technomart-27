@@ -560,7 +560,7 @@ html {
 }
 
     /* brands-filter*/
-.form-filter ul {
+.content-form__filter ul {
   padding-left: 0;
 
   font-size: 15px;
@@ -637,7 +637,7 @@ html {
   content: url("../img/radio-on-disabled.svg");
 }
 
-.form-filter button[type="submit"] {
+.content-form__filter button[type="submit"] {
   width: 140px;
   height: 38px;
   border: 1px solid #e5e5e5;

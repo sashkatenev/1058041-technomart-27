@@ -132,16 +132,18 @@
         <button type="submit">Показать</button>
       </form>
 
-      <p>Сортировка</p>
-      <ul>
-        <li>по цене</li>
-        <li><a href="#">по типу</a></li>
-        <li><a href="#">по функционалу</a></li>
-      </ul>
-      <ul>
-        <li><a><img src="img/icon-sortby-asc-active.svg" alt="по возрастанию" width="8" height="8"></a></li>
-        <li><a href="#"><img src="img/icon-sortby-desc.svg" alt="по убыванию" width="8" height="8"></a></li>
-      </ul>
+      <div class="content-sort__bar">
+        <p>Сортировка:</p>
+        <ul class="sort-bar__byproperty">
+          <li><a class="sort-property__active" id="by_price">по цене</a></li>
+          <li><a href="#" id="by_type">по типу</a></li>
+          <li><a href="#" id="by_functional">по функционалу</a></li>
+        </ul>
+        <ul class="sort-bar__bydirection">
+          <li><a class="sort-direction__active" id="by_ascending" aria-label="сортировка по возрастанию"></a></li>
+          <li><a class="" href="#" id="by_descending" aria-label="сортировка по убыванию"></a></li>
+        </ul>
+      </div>
 
       <section>   <!-- Products list -->
         <h2 class="visually-hidden">Каталог (список) перфораторов</h2>
