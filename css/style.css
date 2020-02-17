@@ -646,6 +646,69 @@ html {
   text-transform: uppercase;
 }
 
+  /* sort-bar */
+.content-sort__bar {
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 1.38;
+  color: #000000;
+
+  background-color: #f7f3ec;
+  text-transform: uppercase;
+}
+
+.content-sort__bar ul {
+  padding: 0;
+  
+  list-style-type: none;
+}
+
+.content-sort__bar li {
+  display: inline-block;
+}
+
+.sort-bar__byproperty a {
+  border-bottom: 1px dotted #ee3643;
+
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.sort-bar__byproperty a:hover {
+  border-bottom-style: solid;
+
+  color: #000000;
+}
+
+.sort-bar__byproperty a.sort-property__active {
+  border-bottom: none;
+
+  color: #ee3643;
+}
+
+.sort-bar__bydirection a[id="by_ascending"]::before {
+  content: url("../img/icon-sortby-asc.svg");
+}
+
+.sort-bar__bydirection a[id="by_ascending"]:hover::before {
+  content: url("../img/icon-sortby-asc-hover.svg");
+}
+
+.sort-bar__bydirection a[id="by_descending"]::before {
+  content: url("../img/icon-sortby-desc.svg");
+}
+
+.sort-bar__bydirection a[id="by_descending"]:hover::before {
+  content: url("../img/icon-sortby-desc-hover.svg");
+}
+
+a[id="by_ascending"].sort-direction__active {
+  content: url("../img/icon-sortby-asc-active.svg");
+}
+
+a[id="by_descending"].sort-direction__active {
+  content: url("../img/icon-sortby-desc-active.svg");
+}
+
 /* section About company (index.html)*/
 .main-company {
   color: #000000;
