@@ -444,30 +444,29 @@ html {
 }
 
   /* Filter-form */
-.form-filter {
+.content-form__filter {
   font-family: "PT Sans Narrow", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 1.38;
   color: #000000;
   
   text-transform: uppercase;
 }
 
-.form-filter p {
-  font-size: 13px;
-  line-height: 1.38;
-  
+.content-form__filter p {
   background-color: #f7f3ec;
 }
 
-.form-filter fieldset {
+.content-form__filter fieldset {
   border: none;
   padding: 0;
 }
 
-.form-filter fieldset:not(:last-of-type) {
+.content-form__filter fieldset:not(:last-of-type) {
   border-bottom: 1px solid #e5e5e5;
 }
 
-.form-filter legend {
+.content-form__filter legend {
   font-family: "PT Sans Narrow", "Arial", sans-serif;
   font-size: 17px;
   line-height: 1.76;
