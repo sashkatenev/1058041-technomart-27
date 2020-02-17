@@ -560,6 +560,93 @@ html {
   text-align: center;
 }
 
+    /* brands-filter*/
+.form-filter ul {
+  padding-left: 0;
+
+  font-size: 15px;
+  line-height: 1.33;
+
+  list-style-type: none;
+}
+
+.filter-checkbox,
+.filter-radio {
+  display: none;
+}
+
+.filter-checkbox + label::before {
+  content: url("../img/checkbox-off.svg");
+
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 12px;
+}
+
+.filter-checkbox:hover + label::before {
+  content: url("../img/checkbox-off-hover.svg");
+}
+
+.filter-checkbox:disabled + label::before {
+  content: url("../img/checkbox-off-disabled.svg");
+}
+
+.filter-checkbox:checked + label::before {
+  content: url("../img/checkbox-on.svg");
+
+  margin-right: 8px;
+}
+
+.filter-checkbox:checked:hover + label::before {
+  content: url("../img/checkbox-on-hover.svg");
+}
+
+.filter-checkbox:checked:disabled + label::before {
+  content: url("../img/checkbox-on-disabled.svg");
+}
+
+.form-filter input:disabled + label {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+    /* power-filter */
+.filter-radio + label::before {
+  content: url("../img/radio-off.svg");
+
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.filter-radio:hover + label::before {
+  content: url("../img/radio-off-hover.svg");
+}
+
+.filter-radio:disabled + label::before {
+  content: url("../img/radio-off-disabled.svg");
+}
+
+.filter-radio:checked + label::before {
+  content: url("../img/radio-on.svg");
+}
+
+.filter-radio:checked:hover + label::before {
+  content: url("../img/radio-on-hover.svg");
+}
+
+.filter-radio:checked:disabled + label::before {
+  content: url("../img/radio-on-disabled.svg");
+}
+
+.form-filter button[type="submit"] {
+  width: 140px;
+  height: 38px;
+  border: 1px solid #e5e5e5;
+
+  background-color: transparent;
+  text-transform: uppercase;
+}
+
 /* section About company (index.html)*/
 .main-company {
   color: #000000;
