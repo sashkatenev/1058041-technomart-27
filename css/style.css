@@ -443,7 +443,123 @@ html {
   text-transform: uppercase;
 }
 
-/* section About company*/
+  /* Filter-form */
+.form-filter {
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  color: #000000;
+  
+  text-transform: uppercase;
+}
+
+.form-filter p {
+  font-size: 13px;
+  line-height: 1.38;
+  
+  background-color: #f7f3ec;
+}
+
+.form-filter fieldset {
+  border: none;
+  padding: 0;
+}
+
+.form-filter fieldset:not(:last-of-type) {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.form-filter legend {
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  font-size: 17px;
+  line-height: 1.76;
+  font-weight: 700;
+}
+
+.slider-range-container {
+  position: relative;
+  
+  height: 80px;
+  
+  background-color: #f7f3ec;
+}
+
+.range-bar {
+  position: absolute;
+  top: 29px;
+  left: 20px;
+
+  width: 180px;
+  height: 22px;
+}
+
+.range-line {
+  position: absolute;
+  top: 9px;
+  left: 0;
+  
+  width: 180px;
+  height: 2px;
+  
+  background-color: #d7dcde;
+}
+
+.range-line-selected {
+  width: 152px;
+  background-color: #00ca74;
+}
+
+.range-track-pin {
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  width: 20px;
+  height: 22px;
+  border: none;
+  border-radius: 50%;
+  
+  background-image: url("../img/icon-filter-button.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.track-pin-max {
+  top: 0;
+  left: 172px;
+}
+
+.range-value {
+  position: relative;
+  
+  display: inline-block;
+  vertical-align: middle;
+  
+  width: 95px;
+  height: 38px;
+  
+  background-color: #f7f3ec;
+}
+
+.range-value  input {
+  position: absolute;
+  top: 8px;
+  left: 5px;
+  
+  width: 85px;
+  background-color: transparent;
+  border: none;
+  
+  text-align: center;
+}
+
+.slider-range-values span {
+  display: inline-block;
+  
+  font-size: 17px;
+  line-height: 1.06;
+  text-align: center;
+}
+
+/* section About company (index.html)*/
 .main-company {
   color: #000000;
 

@@ -64,30 +64,30 @@
       <h1 class="content-title">Перфораторы</h1>
 
       <!-- Форма фильтрации -->
-      <form action="https://echo.htmlacademy.ru" method="get">
+      <form class="form-filter" action="https://echo.htmlacademy.ru" method="get">
         <p>Фильтр:</p>
         <fieldset>
           <legend>Цена:</legend>
-          <div class="slider-range">
-            <!-- индикаторы диапазона: -->
-            <div class="range-bar"></div>
-            <div class="range-bar range-bar-selected"></div>
-            <!-- треки диапазона -->
-            <div class="range-track">
-              <button class="track-pin track-pin-min" type="button" id="min_pin" aria-label="Минимальная цена">min</button>
-              <button class="track-pin track-pin-max" type="button" id="max_pin" aria-label="Максимальная цена">max</button>
+          <div class="price-slider">
+            <div class="slider-range-container">
+              <div class="range-bar">  <!-- ограничитель ползунков -->
+                <!-- индикаторы диапазона: -->
+                <div class="range-line"></div>
+                <div class="range-line range-line-selected"></div>
+                <!-- треки диапазона -->
+                <button class="range-track-pin track-pin-min" type="button" id="min_pin" aria-label="Ползунок для установки минимальной цены"></button>
+                <button class="range-track-pin track-pin-max" type="button" id="max_pin" aria-label="Ползунок для установки максимальной цены"></button>
+              </div>
             </div>
             <!-- поля для ввода мин. и макс. цен: -->
-            <div class="range-values">
-              <p>
-                <label class="visually-hidden" for="min_price">от</label>
-                <input type="text" id="min_price" name="min_price" value="0">
-              </p>
-              <p>&ndash;</p>
-              <p>
-                <label class="visually-hidden" for="max_price">до</label>
-                <input type="text" id="max_price" name="max_price" value="30000">
-              </p>
+            <div class="slider-range-values">
+              <div class="range-value">
+                <input type="text" id="min_price" name="min_price" value="0" aria-label="Минимальная цена">
+              </div>
+              <span>&ndash;</span>
+              <div class="range-value">
+                <input type="text" id="max_price" name="max_price" value="30000" aria-label="Максимальная цена">
+              </div>
             </div>
           </div>
         </fieldset>
@@ -95,19 +95,24 @@
           <legend>Производители:</legend>
           <ul>
             <li>
-              <label><input type="checkbox" name="brand" value="bosch" checked>Bosch</label>
+              <input type="checkbox" id="bosch" name="brand" value="bosch" checked>
+              <label for="bosch">Bosch</label>
             </li>
             <li>
-              <label><input type="checkbox" name="brand" value="interskol">Интерскол</label>
+              <input type="checkbox" name="brand" value="interskol">
+              <label>Интерскол</label>
             </li>
             <li>
-              <label><input type="checkbox" name="brand" value="makita" checked>Makita</label>
+              <input type="checkbox" name="brand" value="makita" checked>
+              <label>Makita</label>
             </li>
             <li>
-              <label><input type="checkbox" name="brand" value="dewalt">Dewalt</label>
+              <input type="checkbox" name="brand" value="dewalt">
+              <label>Dewalt</label>
             </li>
             <li>
-              <label><input type="checkbox" name="brand" value="hitachi">Hitachi</label>
+              <input type="checkbox" name="brand" value="hitachi">
+              <label>Hitachi</label>
             </li>
           </ul>
         </fieldset>
@@ -115,10 +120,12 @@
           <legend>Питание:</legend>
           <ul>
             <li>
-              <label><input type="radio" name="power" value="1" checked>аккумуляторные</label>
+              <input type="radio" name="power" value="1" checked>
+              <label>аккумуляторные</label>
             </li>
             <li>
-              <label><input type="radio" name="power" value="2">сетевые</label>
+              <input type="radio" name="power" value="2">
+              <label>сетевые</label>
             </li>
           </ul>
         </fieldset>
