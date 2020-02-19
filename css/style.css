@@ -699,28 +699,35 @@ a {
   color: #ee3643;
 }
 
-.sort-bar__bydirection a[id="by_ascending"]::before {
-  content: url("../img/icon-sortby-asc.svg");
+.sort-bar__bydirection a::before {
+  content: "";
+
+  display: inline-block;
+  vertical-align: middle;
+  width: 11px;
+  height: 10px;
+
+  background-image: url("../img/icon-sorting.svg");
 }
 
 .sort-bar__bydirection a[id="by_ascending"]:hover::before {
-  content: url("../img/icon-sortby-asc-hover.svg");
+  background-position-x: -20px;
+}
+
+.sort-bar__bydirection a[id="by_ascending"].sort-direction__active::before {
+  background-position-x: -40px;
 }
 
 .sort-bar__bydirection a[id="by_descending"]::before {
-  content: url("../img/icon-sortby-desc.svg");
+  background-position-x: -60px;
 }
 
 .sort-bar__bydirection a[id="by_descending"]:hover::before {
-  content: url("../img/icon-sortby-desc-hover.svg");
+  background-position-x: -80px;
 }
 
-a[id="by_ascending"].sort-direction__active {
-  content: url("../img/icon-sortby-asc-active.svg");
-}
-
-a[id="by_descending"].sort-direction__active {
-  content: url("../img/icon-sortby-desc-active.svg");
+.sort-bar__bydirection a[id="by_descending"].sort-direction__active::before {
+  background-position-x: -100px;
 }
 
   /* section Product-list */

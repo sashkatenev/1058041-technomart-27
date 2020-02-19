@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="111" height="10" viewBox="0 0 111 10">
+  <defs>
+    <symbol id="icon_sort_by_asc">
+      <path d="M5.5 0L0 10h11z"/>
+    </symbol>
+    <symbol id="icon_sort_by_desc">
+      <path d="M5.5 10L0 0h11"/>
+    </symbol>
+  </defs>
+  <use xlink:href="#icon_sort_by_asc" x="0" y="0" fill="#c5c5c5" />
+  <use xlink:href="#icon_sort_by_asc" x="20" y="0" fill="#000000" />   <!-- hover -->
+  <use xlink:href="#icon_sort_by_asc" x="40" y="0" fill="#ee3643" />   <!-- active -->
+  <use xlink:href="#icon_sort_by_desc" x="60" y="0" fill="#c5c5c5" />
+  <use xlink:href="#icon_sort_by_desc" x="80" y="0" fill="#000000" />   <!-- hover -->
+  <use xlink:href="#icon_sort_by_desc" x="100" y="0" fill="#ee3643" />   <!-- active -->
+</svg>
