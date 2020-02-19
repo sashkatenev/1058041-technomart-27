@@ -20,14 +20,6 @@ a {
   text-decoration: none;
 }
 
-html {
-  box-sizing: border-box;
-}
-
-* {
-  box-sizing: inherit;
-}
-
 .visually-hidden {
   position: absolute;
 
@@ -91,18 +83,15 @@ html {
 }
 
 .head-button {
+  position: relative;
+  
   display: inline-block;
   vertical-align: middle;
-
-  width: 150px;
-
   border: none;
 
   color: #ffffff;
 
   background-color: #293449;
-  background-position-y: 50%;  
-  background-repeat: no-repeat;
 }
 
 .head-button:hover {
@@ -117,7 +106,6 @@ html {
 
     /* search-field */
 .form-search input {
-  width: 221px;
   padding: 11px 0 12px;
 }
 
@@ -135,54 +123,61 @@ html {
   padding: 12px 15px 13px 17px;
 
   background-image: url("../img/icon-search.svg");
+  background-repeat: no-repeat;
   background-origin: content-box;
 
   cursor: pointer;
 }
 
 .head-button-search:hover {
-  background-image: url("../img/icon-search-hover.svg");  /* white */
+  background-position-y: -40px;  /* white */
 }
 
 .head-button[type="search"]:focus + .head-button-search:not(:hover) {
   background-color: #ffffff;
-  background-image: url("../img/icon-search-focus.svg");  /* red */
+  background-position-y: -80px;  /* red */
 }
 
 .head-button-search:active {
-  background-image: url("../img/icon-search.svg");  /* grey */
+   background-position-y: 0;  /* grey */
+}
+
+.head-button::before {
+  position: absolute;
+
+  opacity: 0.3;
+}
+
+.head-button:hover::before {
+  opacity: 1.0;
+}
+
+.head-button:active::before {
+  opacity: 0.5;
 }
 
     /* link Закладки */
 .head-button-bookmark {
   padding-left: 44px;
-
-  background-image: url("../img/icon-bookmark.svg");
-  background-position-x: 17px;
 }
 
-.head-button-bookmark:hover {
-  background-image: url("../img/icon-bookmark-hover.svg");
-}
-
-.head-button-bookmark:active {
-  background-image: url("../img/icon-bookmark-click.svg");
+.head-button-bookmark::before {
+  content: url("../img/icon-bookmark.svg");
+  
+  left: 17px;
+  top: calc(50% - 8px);
 }
 
     /* link Корзина */
 .head-button-cart {
   padding-left: 50px;
-
-  background-image: url("../img/icon-cart.svg");
-  background-position-x: 18px;
 }
 
-.head-button-cart:hover {
-  background-image: url("../img/icon-cart-hover.svg");
-}
-
-.head-button-cart:active {
-  background-image: url("../img/icon-cart-click.svg");
+.head-button-cart::before {
+  content: url("../img/icon-cart.svg");
+  
+  left: 18px;
+  top: calc(50% - 7px);
 }
 
     /* button Оформить заказ */
@@ -251,13 +246,15 @@ html {
 }
 
 .user-button {
+  display: inline-block;
+  vertical-align: middle;
+
   font-size: 21px;
   line-height: 1;
   color: #000000;
 
   background-color: #ffffff;
   background-repeat: no-repeat;
-  background-position-y: 50%;
 }
 
 .user-button:hover,
@@ -277,43 +274,40 @@ html {
 
     /* button Войти */
 .user-button-log-in {
-  padding-right: 27px;
-  padding-left: 48px;
+  padding: 14px 27px 15px 48px;
   margin-right: 10px;
 
   background-image: url("../img/icon-login.svg");
-  background-position-x: 14px;
+  background-position: 14px 16px;
 }
 
 .user-button-log-in:hover {
-  background-image: url("../img/icon-login-hover.svg");
+  background-position-y: -24px;
 }
 
 .user-button-log-in:active {
-  background-image: url("../img/icon-login.svg");
+  background-position-y: 16px;
 }
 
     /* button Регистрация */
 .user-button-registration {
-  padding-right: 25px;
-  padding-left: 25px;
+  padding: 14px 25px 15px;
 }
 
     /* link Равшан Джамшутович */
 .user-button-profile {
-  padding-right: 27px;
-  padding-left: 47px;
+  padding: 14px 27px 11px 47px;
 
   background-image: url("../img/icon-user.svg");
-  background-position-x: 13px;
+  background-position: 13px 15px;
 }
 
 .user-button-profile:hover {
-  background-image: url("../img/icon-user-hover.svg");
+  background-position-y: -25px;
 }
 
 .user-button-profile:active {
-  background-image: url("../img/icon-user.svg");
+  background-position-y: 15px;
 }
 
    /* exit-button */
@@ -330,11 +324,11 @@ html {
 }
 
 .user-button-log-out:hover {
-  background-image: url("../img/icon-logout-hover.svg");
+  background-position-y: -40px;
 }
 
 .user-button-log-out:active {
-  background-image: url("../img/icon-logout.svg");
+  background-position-y: 0;
 }
 
 .user-links a {
