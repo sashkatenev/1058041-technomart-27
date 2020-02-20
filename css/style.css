@@ -732,7 +732,12 @@ a {
 
   /* section Product-list */
 .content-products {
+  margin-bottom: 60px;
   background-color: #ffffff;
+}
+
+.content-product__list {
+  margin-bottom: 52px;
 }
 
 .content-product__item {
@@ -789,6 +794,8 @@ a {
 
   font-size: 14px;
   line-height: 1.29;
+
+  cursor: pointer;
 }
 
 .product-item__actions button:last-child {
@@ -901,6 +908,61 @@ a {
 /*.old-price_hidden del.product-item__oldprice{
   visibility: hidden;
 }*/
+
+  /* paginator */
+.content-paginator__list {
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  font-size: 13px;
+  color: #000000;
+
+  text-transform: uppercase;
+
+  list-style-type: none;
+}
+
+.content-paginator__item {
+  display: inline-block;
+
+  text-align: center;
+}
+
+.content-paginator__item a {
+  display: inline-block;
+  min-width: 38px;
+  max-height: 38px;
+  margin-right: 10px;
+  box-sizing: border-box;
+  padding: 15px;
+  padding-top: 12px;
+
+  line-height: 1;
+
+  background-color: transparent;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+}
+
+.content-paginator__item a:hover {
+  border-color: #bdc6ca;
+}
+
+.content-paginator__item a:active {
+  border-color: #ee3643;
+}
+
+.content-paginator__item.paginator-item__current a {
+  border-color: #ee3643;
+
+  color: #ffffff;
+
+  background-color: #ee3643;
+}
+
+.paginator-item__next a {
+  min-width: 140px;
+  padding-right: 32px;
+  padding-left: 32px;
+}
 
 /* section About company (index.html)*/
 .main-company {
