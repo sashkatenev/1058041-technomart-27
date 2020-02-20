@@ -429,6 +429,7 @@ a {
   padding-left: 30px;
   margin: 0;
 
+  font-family: inherit;
   font-size: 30px;
   line-height: 1;
 
@@ -745,6 +746,7 @@ a {
   
   display: inline-block;
   width: 220px;
+  min-height: 318px;
   border: 1px solid #e5e5e5;
   margin-right: 10px;
   margin-bottom: 10px;
@@ -863,10 +865,8 @@ a {
 }
 
 .product-item__oldprice {
-  min-height: 18px;
+  min-height: 19px;
   margin-bottom: 13px;
-
-  /*line-height: 0;*/
 }
 
 .content-product__item span,
@@ -904,10 +904,6 @@ a {
   top: 0;
   right: 0;
 }
-
-/*.old-price_hidden del.product-item__oldprice{
-  visibility: hidden;
-}*/
 
   /* paginator */
 .content-paginator__list {
@@ -964,7 +960,7 @@ a {
   padding-left: 32px;
 }
 
-/* section About company (index.html)*/
+/* section About company (index.html) */
 .main-company {
   color: #000000;
 
@@ -978,6 +974,25 @@ a {
   line-height: 1.11;
 
   list-style-image: url("../img/icon-bullet-marker.svg");
+}
+
+  /* section content-summary ("О перфораторах") */
+.content-summary {
+  padding: 67px 159px 73px 130px;
+  background-color: #f4f7f9;
+}
+
+.content-summary h2 {
+  padding: 0;
+  margin-bottom: 41px;
+
+  /*font-family: "Cuprum", "Arial", sans-serif;*/
+  color: #000000;
+  font-weight: 400;
+}
+
+.content-summary p {
+  /*padding: 0;*/
 }
 
 /* footer */
