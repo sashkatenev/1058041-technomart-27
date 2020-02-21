@@ -1062,7 +1062,7 @@ img {
   border-image-width: 25px 25px 25px 36px;
 }
 
-.product-item__new::after {
+.item-new::after {
   content: url("../img/icon-new-flag.png");
 
   position: absolute;
