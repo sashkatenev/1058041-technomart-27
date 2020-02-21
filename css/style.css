@@ -498,6 +498,7 @@ img {
 
 .popular-title-box {
   padding: 33px 0 35px 30px;
+  margin-bottom: 20px;
   background-color: #f9f5f0;
 }
 
@@ -510,17 +511,23 @@ img {
 }
 
 /* Index.html Popular brands */
+.popular-brands {
+  margin-bottom: 85px;
+
+  background-color: #ffffff;
+}
+
 .brand-list {
   list-style-type: none;
-  padding: 10px 0;  /*уточнить*/
+  padding: 0;
 }
 
 .brand-item {
   display: inline-block;
   width: 220px;
   height: 145px;
-  margin-right: 10px;  /*уточнить*/
-  margin-bottom: 10px;  /*уточнить*/
+  margin-right: 20px;
+  margin-bottom: 20px;
   
   line-height: 1;
   text-align: center;
