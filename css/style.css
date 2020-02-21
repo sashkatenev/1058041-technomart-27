@@ -56,9 +56,11 @@ img {
   color: #ffffff;
 
   background-color: #ee3643;
+  border: none;
   border-radius: 2px;
 
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .site-button:hover {
