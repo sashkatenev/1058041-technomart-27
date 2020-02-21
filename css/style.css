@@ -421,6 +421,46 @@ img {
   text-align: center;
 }
 
+/* Index.html Popular brands */
+.brand-list {
+  list-style-type: none;
+  padding: 10px 0;  /*уточнить*/
+}
+
+.brand-item {
+  display: inline-block;
+  width: 220px;
+  height: 145px;
+  margin-right: 10px;  /*уточнить*/
+  margin-bottom: 10px;  /*уточнить*/
+  
+  line-height: 1;
+  text-align: center;
+  
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+}
+
+.brand-item:hover {
+  box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
+}
+
+.brand-item a:active {
+  opacity: 0.3;
+}
+
+.brand-item  a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  line-height: 145px;
+}
+
+.brand-item img {
+  vertical-align: middle;
+  line-height: normal;
+}
+
 /* catalog main */
 .content {
   background-color: #ffffff;
