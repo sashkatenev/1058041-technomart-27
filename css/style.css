@@ -405,18 +405,21 @@ img {
 .promo-item {
   position: relative;
   
+  display: inline-block;
   box-sizing: border-box;
   width: 300px;
   min-height: 123px;
+  margin-right: 20px;
+  margin-bottom: 20px;
   
   background-repeat: no-repeat;
   border: 1px solid transparent;
 }
 
 .promo-item h3 {
-  margin-top: 20px;  /*уточнить*/
-  margin-left: 15px;  /*уточнить*/
-  margin-bottom: 9px;  /*уточнить*/
+  margin-top: 26px;
+  margin-left: 23px;
+  margin-bottom: 15px;
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 24px;
   line-height: 1.25;
@@ -429,8 +432,8 @@ img {
   box-sizing: border-box;
   min-width: 135px;
   height: 38px;
-  margin-left: 25px;  /*уточнить*/
-  margin-bottom: 25px;  /*уточнить*/
+  margin-left: 25px;
+  margin-bottom: 22px;
   
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
@@ -439,6 +442,7 @@ img {
   color: #ffffff;
   
   background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
   text-transform: uppercase;
 }
 
@@ -453,31 +457,31 @@ img {
 .promo-materials {
   background-color: #ffbf47;
   background-image: url("../img/icon-materials.svg");
-  background-position: 80% 50%;
+  background-position: 213px 50%;
 }
 
 .promo-tools {
   background-color: #3bbce3;
   background-image: url("../img/icon-tools.svg");
-  background-position: 85% 50%;
+  background-position: 197px 50%;
 }
 
 .promo-machines {
   background-color: #dc91d8;
   background-image: url("../img/icon-mashines.svg");
-  background-position: 85% 50%;
+  background-position: 191px 50%;
 }
 
 .promo-discounts {
   background-color: #8ed78f;
   background-image: url("../img/icon-discounts.svg");
-  background-position: 80% 50%;
+  background-position: 196px 50%;
 }
 
 .promo-delivery {
   background-color: #ffbf47;
   background-image: url("../img/icon-delivery.svg");
-  background-position: 85% 50%;
+  background-position: 191px 50%;
 }
 
 /* Index.html Popular goods */
@@ -493,14 +497,14 @@ img {
 }
 
 .popular-title-box {
-  padding: 20px;  /* уточнить */
+  padding: 33px 0 35px 30px;
   background-color: #f9f5f0;
 }
 
 .popular-title-box a {
   display: inline-block;
   min-width: 253px;
-  padding: 10px 0;  /*уточнить*/
+  padding: 14px 55px;
   
   text-align: center;
 }
