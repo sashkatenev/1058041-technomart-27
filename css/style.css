@@ -396,6 +396,31 @@ img {
   background-color: #1d2739;
 }
 
+/* Index.html Popular goods */
+.main-title {
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 400;
+
+  text-transform: uppercase;
+}
+
+.popular-title-box {
+  padding: 20px;  /* уточнить */
+  background-color: #f9f5f0;
+}
+
+.popular-title-box a {
+  display: inline-block;
+  min-width: 253px;
+  padding: 10px 0;  /*уточнить*/
+  
+  text-align: center;
+}
+
 /* catalog main */
 .content {
   background-color: #ffffff;
