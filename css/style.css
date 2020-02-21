@@ -593,6 +593,14 @@ img {
   text-transform: uppercase;
 }
 
+.catalog-title-box {
+  padding-top: 32px;
+  padding-bottom: 34px;
+  padding-left: 30px;
+  
+  background-color: #f2f6f8;
+}
+
   /* Filter-form */
 .content-form__filter {
   font-family: "PT Sans Narrow", "Arial", sans-serif;
@@ -1030,6 +1038,8 @@ img {
   font-size: 17px;
   line-height: 1.06;
   font-weight: 700;
+
+  text-transform: uppercase;
 }
 
 .product-item__oldprice del {
