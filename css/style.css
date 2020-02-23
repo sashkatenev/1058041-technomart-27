@@ -53,6 +53,8 @@ img {
 
   /* red site-button */
 .site-button {
+  font-size: 14px;
+  text-align: center;
   color: #ffffff;
 
   background-color: #ee3643;
