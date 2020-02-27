@@ -54,6 +54,7 @@ img {
   /* red site-button */
 .site-button {
   font-size: 14px;
+  line-height: 38px;
   text-align: center;
   color: #ffffff;
 
@@ -401,47 +402,49 @@ img {
 }
 
 /* promo-block*/
-.promo-list {
-  display: inline-block;
-  list-style-type: none;
+.promo {
+  display: -ms-grid;
+  display: grid;
+
+  -ms-grid-rows: 123px 20px 123px 20px 123px;
+  grid-template-rows: 123px 123px 123px;
+
+  -ms-grid-columns: 300px 20px 300px 20px 300px;
+  grid-template-columns: 300px 300px 300px;
+
+  gap: 20px;
 }
 
 .promo-item {
   position: relative;
   
-  display: inline-block;
-  box-sizing: border-box;
   width: 300px;
-  min-height: 123px;
-  margin-right: 20px;
-  margin-bottom: 20px;
+  max-height: 123px;
   
   background-repeat: no-repeat;
-  border: 1px solid transparent;
 }
 
 .promo-item h3 {
-  margin-top: 26px;
-  margin-left: 23px;
-  margin-bottom: 15px;
+  padding-top: 26px;
+  padding-left: 23px;
+  padding-bottom: 15px;
+  margin: 0;
   font-family: "Cuprum", "Arial", sans-serif;
-  font-size: 24px;
-  line-height: 1.25;
+  font-size: 22px;
+  line-height: 1;
   font-weight: 700;
   color: #ffffff;
 }
 
 .promo-item a {
   display: inline-block;
-  box-sizing: border-box;
   min-width: 135px;
-  height: 38px;
   margin-left: 25px;
   margin-bottom: 22px;
   
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
-  line-height: 40px;
+  line-height: 38px;
   text-align: center;
   color: #ffffff;
   
@@ -656,15 +659,58 @@ img {
     /* slider */
 .promo-slider {
   position: relative;
+  
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 3;
+  grid-row: 2/4;
 
-  width: 620px;
-  height: 266px;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/3;
+}
 
-  background-color: #dddddd;
+.promo-materials {
+  -ms-grid-row: 1;
+  grid-row: 1/2;
+  -ms-grid-column: 1;
+  grid-column: 1/2;
+}
+
+.promo-tools {
+  -ms-grid-row: 1;
+  grid-row: 1/2;
+  -ms-grid-column: 3;
+  grid-column: 2/3;
+}
+
+.promo-machines {
+  -ms-grid-row: 1;
+  grid-row: 1/2;
+  -ms-grid-column: 5;
+  grid-column: 3/4;
+}
+
+.promo-discounts {
+  -ms-grid-row: 3;
+  grid-row: 2/3;
+  -ms-grid-column: 5;
+  grid-column: 3/4;
+}
+
+.promo-delivery {
+  -ms-grid-row: 5;
+  grid-row: 3/4;
+  -ms-grid-column: 5;
+  grid-column: 3/4;
 }
 
 .promo-slide {
   display: none;
+  
+  width: 620px;
+  height: 266px;
+
+  background-color: #dddddd;
 }
 
 .promo-slider input {
@@ -780,8 +826,6 @@ img {
   left: 25px;
 
   min-width: 195px;
-
-  line-height: 38px;
 }
 
 .slider-button {
