@@ -545,7 +545,7 @@ img {
   display: none;
 }
 
-.slider-labels {
+.slider-controls {
   position: absolute;
   bottom: 39px;
   left: 50%;
@@ -554,7 +554,7 @@ img {
   display: flex;
 }
 
-.slider-labels label {
+.slider-controls label {
   box-sizing: border-box;
   width: 10px;
   height: 10px;
@@ -564,7 +564,7 @@ img {
   border: 2px solid #ffffff;
 }
 
-.slider-labels label:not(:last-of-type) {
+.slider-controls label:not(:last-of-type) {
   margin-right: 10px;
 }
 
@@ -572,23 +572,23 @@ img {
   display: block;
 }
 
-.slider-check01:checked ~ .slider-labels label:nth-of-type(1) {
+.slider-check01:checked ~ .slider-controls label:nth-of-type(1) {
   background-color: #ee3643;
 }
 
-.slider-check02:checked ~ .slider-labels label:nth-of-type(2) {
+.slider-check02:checked ~ .slider-controls label:nth-of-type(2) {
   background-color: #ee3643;
 }
 
-.slider-check03:checked ~ .slider-labels label:nth-of-type(3) {
+.slider-check03:checked ~ .slider-controls label:nth-of-type(3) {
   background-color: #ee3643;
 }
 
-.slider-check04:checked ~ .slider-labels label:nth-of-type(4) {
+.slider-check04:checked ~ .slider-controls label:nth-of-type(4) {
   background-color: #ee3643;
 }
 
-.slider-check05:checked ~ .slider-labels label:nth-of-type(5) {
+.slider-check05:checked ~ .slider-controls label:nth-of-type(5) {
   background-color: #ee3643;
 }
 
