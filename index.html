@@ -82,7 +82,7 @@
 
         <div class="promo-slider">
           <h2 class="visually-hidden">Слайдер</h2>
-          <input class="slider-check slider-check01" type="radio" id="check_01" name="slider_check">
+          <input class="slider-check slider-check01" type="radio" id="promo_check_01" name="slider_check">
           <div class="promo-slide">
             <div class="slide-description">
               <h3>Перфораторы</h3>
@@ -90,7 +90,7 @@
             </div>
             <img src="img/slide-01.jpg" alt="Изображение перфоратора" width="620" height="266">
           </div>
-          <input class="slider-check slider-check02" type="radio" id="check_02" name="slider_check" checked>
+          <input class="slider-check slider-check02" type="radio" id="promo_check_02" name="slider_check" checked>
           <div class="promo-slide">
             <div class="slide-description">
               <h3>Дрели</h3>
@@ -100,8 +100,8 @@
           </div>
           <input class="slider-check slider-check03" type="radio" id="check_03" name="slider_check">
           <div class="slider-labels">
-            <label for="check_01" aria-label="Переключатель первого слайда"></label>
-            <label for="check_02" aria-label="Переключатель второго слайда"></label>
+            <label for="promo_check_01" aria-label="Переключатель первого слайда"></label>
+            <label for="promo_check_02" aria-label="Переключатель второго слайда"></label>
           </div>
           <button class="slider-button" id="btn-left" type="button" aria-label="К предыдущему слайду"></button>
           <button class="slider-button" id="btn-right" type="button" aria-label="К следующему слайду"></button>
@@ -205,26 +205,29 @@
         </ul>
       </section>
 
-      <section class="slider-services">
+      <section class="service-slider">
         <h2 class="main-title">Сервисы</h2>
         <p class="site-paragraph">Хороший Интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
         </p>
-        <ul class="service-names-list">
-          <li class="service-name-item name-item-active"><a href="#">Доставка</a></li>
-          <li class="service-name-item"><a href="#">Гарантия</a></li>
-          <li class="service-name-item"><a href="#">Кредит</a></li>
-        </ul>
-        <ul class="slider-service-list">
-          <li class="slider-service-item service-delivery">
+        <input class="service-slider-check service-slider-check01" type="radio" id="service_check_01" name="service_check" checked>
+        <input class="service-slider-check service-slider-check02" type="radio" id="service_check_02" name="service_check">
+        <input class="service-slider-check service-slider-check03" type="radio" id="service_check_03" name="service_check">
+        <div class="service-slider-controls">
+          <label for="service_check_01">Доставка</label>
+          <label for="service_check_02">Гарантия</label>
+          <label for="service_check_03">Кредит</label>
+        </div>
+        <ul class="service-slider-list">
+          <li class="service-slider-item">
             <h3 class="main-title">Доставка</h3>
             <p class="site-paragraph">Мы с удовольствием доставим ваш товар прямо <br>к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, <br>поднимая его на ваш этаж!</p>
           </li>
-          <li class="slider-service-item service-guarantee">
+          <li class="service-slider-item">
             <h3 class="main-title">Гарантия</h3>
             <p class="site-paragraph">Если купленный у нас товар поломается или заискрит, <br>а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. <br>Дом уж восстановите как-нибудь сами.
             </p>
           </li>
-          <li class="slider-service-item service-credit">
+          <li class="service-slider-item">
             <h3 class="main-title">Кредит</h3>
             <p class="site-paragraph">Залезть в долговую яму стало проще!<br>Кредитные консультанты придут вам на помощь.</p>
             <button class="site-button" type="button">Отправить заявку</button>
