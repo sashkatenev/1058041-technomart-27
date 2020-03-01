@@ -1175,35 +1175,16 @@ img {
   color: #ee3643;
 }
 
-.sort-bar-bydirection a::before {
-  content: "";
-
-  display: inline-block;
-  vertical-align: middle;
-  width: 11px;
-  height: 10px;
-
-  background-image: url("../img/icon-sorting.svg");
+.sort-direction path {
+  fill: #c5c5c5;
 }
 
-.sort-bar-bydirection a[id="by_ascending"]:hover::before {
-  background-position-x: -20px;
+.sort-direction:not(.sort-direction-active):hover path {
+  fill: #000000;
 }
 
-.sort-bar-bydirection a[id="by_ascending"].sort-direction-active::before {
-  background-position-x: -40px;
-}
-
-.sort-bar-bydirection a[id="by_descending"]::before {
-  background-position-x: -60px;
-}
-
-.sort-bar-bydirection a[id="by_descending"]:hover::before {
-  background-position-x: -80px;
-}
-
-.sort-bar-bydirection a[id="by_descending"].sort-direction-active::before {
-  background-position-x: -100px;
+.sort-direction-active path {
+  fill: #ee3643;
 }
 
   /* section Popular-products, Product-list */
@@ -1363,7 +1344,7 @@ img {
 .product-item-actualprice {
   display: inline-block;
   padding: 0;
-  margin-bottom: 21px;                                                                
+  margin-bottom: 21px;
 
   color: #ffffff;
 
