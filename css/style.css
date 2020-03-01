@@ -331,7 +331,7 @@ img {
   fill: #c5c5c5;
 }
 
-   /* exit-button */
+   /* logout-button */
 .user-button-log-out {
   display: inline-block;  
   box-sizing: content-box;
@@ -340,16 +340,15 @@ img {
   height: 17px;
   padding: 14px 10px;
 
-  background-image: url("../img/icon-logout.svg");
-  background-origin: content-box;
+  fill: #c5c5c5;
 }
 
-.user-button-log-out:hover {
-  background-position-y: -40px;
+.user-button-log-out:hover path {
+  fill: #32425c;
 }
 
-.user-button-log-out:active {
-  background-position-y: 0;
+.user-button-log-out:active path {
+  fill: #c5c5c5;
 }
 
 .user-links a {
