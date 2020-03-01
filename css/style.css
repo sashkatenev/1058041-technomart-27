@@ -267,7 +267,7 @@ img {
   color: #000000;
 
   background-color: #ffffff;
-  background-repeat: no-repeat;
+  /*background-repeat: no-repeat;*/
 }
 
 .user-button:hover,
@@ -313,18 +313,22 @@ img {
 
     /* link Равшан Джамшутович */
 .user-button-profile {
-  padding: 14px 27px 11px 47px;
-
-  background-image: url("../img/icon-user.svg");
-  background-position: 13px 15px;
+  padding: 14px 27px 11px 13px;
 }
 
-.user-button-profile:hover {
-  background-position-y: -25px;
+.user-button-profile svg {
+  vertical-align: middle;
+  padding-right: 9px;
+
+  fill: #c5c5c5;
 }
 
-.user-button-profile:active {
-  background-position-y: 15px;
+.user-button-profile:hover path {
+  fill: #32425c;
+}
+
+.user-button-profile:active path {
+  fill: #c5c5c5;
 }
 
    /* exit-button */
