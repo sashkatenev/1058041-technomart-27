@@ -285,21 +285,25 @@ img {
   color: rgba(0, 0, 0, 0.3);
 }
 
-    /* button Войти */
+    /* Войти */
 .user-button-log-in {
-  padding: 14px 27px 15px 48px;
+  padding: 14px 27px 15px 14px;
   margin-right: 10px;
-
-  background-image: url("../img/icon-login.svg");
-  background-position: 14px 16px;
 }
 
-.user-button-log-in:hover {
-  background-position-y: -24px;
+.user-button-log-in svg {
+  vertical-align: middle;
+  padding-right: 9px;
+
+  fill: #c5c5c5;
 }
 
-.user-button-log-in:active {
-  background-position-y: 16px;
+.user-button-log-in:hover path {
+  fill: #32425c;
+}
+
+.user-button-log-in:active path {
+  fill: #c5c5c5;
 }
 
     /* button Регистрация */
