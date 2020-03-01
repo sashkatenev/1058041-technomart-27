@@ -73,7 +73,6 @@ img {
 .site-button:active {
   background-color: #ba2732;
 }
-/* end of general-rules */
 
 /* header */
 .main-header {
@@ -126,31 +125,34 @@ img {
   background-color: #ffffff;
 }
 
-    /* button Поиск */
+    /* Поиск */
 .head-button-search {
   box-sizing: content-box;
   width: 17px;
   height: 17px;
   padding: 12px 15px 13px 17px;
-
-  background-image: url("../img/icon-search.svg");
-  background-repeat: no-repeat;
-  background-origin: content-box;
-
-  cursor: pointer;
 }
 
-.head-button-search:hover {
-  background-position-y: -40px;  /* white */
+.head-button-search path {
+  fill: #ffffff;
+  fill-opacity: 0.3;
+}
+
+.head-button-search:hover path {
+  fill-opacity: 1;
 }
 
 .head-button[type="search"]:focus + .head-button-search:not(:hover) {
   background-color: #ffffff;
-  background-position-y: -80px;  /* red */
 }
 
-.head-button-search:active {
-   background-position-y: 0;  /* grey */
+.head-button[type="search"]:focus + .head-button-search:not(:hover) path {
+  fill: #ee3643;
+  fill-opacity: 1;
+}
+
+.head-button-search:active path {
+  fill-opacity: 0.3;
 }
 
 .head-button::before {
@@ -847,6 +849,21 @@ img {
   min-width: 195px;
 
   font-size: 14px;
+}
+
+.service-slider::before,
+.service-slider::after {
+  content: "";
+
+  visibility: hidden;
+}
+
+.service-slider::before {
+  background-image: url("img/guarantee.png");
+}
+
+.service-slider::after {
+  background-image: url("img/credit.png");
 }
 
 /* catalog main */
