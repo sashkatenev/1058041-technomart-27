@@ -1,25 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="177" height="23" viewBox="0 0 177 23">
   <defs>
-    <symbol id="check_checkbox">
+    <symbol id="checked">
       <path d="M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z"/>
-    </symbol>
-    <symbol id="border_checkbox_checked">
       <path d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z"/>
     </symbol>
-    <symbol id="border_checkbox_unchecked">
+    <symbol id="unchecked">
       <path d="M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z"/>
     </symbol>
-    <symbol id="checkbox_checked">
-      <g>
-        <use xlink:href="#border_checkbox_checked" x="0" y="0" />
-        <use xlink:href="#check_checkbox" x="0" y="0" />
-      </g>
-    </symbol>
   </defs>
-  <use xlink:href="#border_checkbox_unchecked" x="0" y="0" fill="#c5c5c5"/> <!-- unchecked -->
-  <use xlink:href="#border_checkbox_unchecked" x="30" y="0" fill="#b5b5b5"/> <!-- unchecked-hover -->
-  <use xlink:href="#border_checkbox_unchecked" x="60" y="0" fill="#c5c5c5" fill-opacity="0.3"/> <!-- unchecked-disabled -->
-  <use xlink:href="#checkbox_checked" x="90" y="0" fill="#c5c5c5"/> <!-- checked -->
-  <use xlink:href="#checkbox_checked" x="120" y="0" fill="#b5b5b5"/> <!-- checked-hover -->
-  <use xlink:href="#checkbox_checked" x="150" y="0" fill="#c5c5c5" fill-opacity="0.3"/> <!-- checked-disabled -->
+  <use xlink:href="#unchecked" x="0" y="0" fill="#c5c5c5"/> <!-- unchecked -->
+  <use xlink:href="#unchecked" x="30" y="0" fill="#b5b5b5"/> <!-- hover -->
+  <use xlink:href="#unchecked" x="60" y="0" fill="#c5c5c5" fill-opacity="0.3"/> <!-- disabled -->
+  <use xlink:href="#checked" x="90" y="0" fill="#c5c5c5"/> <!-- checked -->
+  <use xlink:href="#checked" x="120" y="0" fill="#b5b5b5"/> <!-- hover -->
+  <use xlink:href="#checked" x="150" y="0" fill="#c5c5c5" fill-opacity="0.3"/> <!-- disabled -->
 </svg>
