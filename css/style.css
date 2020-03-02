@@ -913,7 +913,7 @@ img {
 }
 
   /* Filter-form */
-.content-form-filter {
+.form-filter {
   font-family: "PT Sans Narrow", "Arial", sans-serif;
   font-size: 13px;
   line-height: 1.38;
@@ -922,20 +922,20 @@ img {
   text-transform: uppercase;
 }
 
-.content-form-filter p {
+.form-filter p {
   background-color: #f7f3ec;
 }
 
-.content-form-filter fieldset {
+.form-filter fieldset {
   border: none;
   padding: 0;
 }
 
-.content-form-filter fieldset:not(:last-of-type) {
+.form-filter fieldset:not(:last-of-type) {
   border-bottom: 1px solid #e5e5e5;
 }
 
-.content-form-filter legend {
+.form-filter legend {
   font-family: "PT Sans Narrow", "Arial", sans-serif;
   font-size: 17px;
   line-height: 1.76;
@@ -1029,7 +1029,7 @@ img {
 }
 
     /* brands-filter*/
-.content-form-filter ul {
+.form-filter ul {
   padding-left: 0;
 
   font-size: 15px;
@@ -1049,37 +1049,43 @@ img {
   margin-bottom: 20px;
 }
 
-.filter-checkbox + label::before {
+.filter-brands label {
+  position: relative;
+
+  padding-left: 35px;
+}
+
+.filter-checkbox + label::before,
+.filter-checkbox:checked + label::after {
   content: "";
-  display: inline-block;
-  vertical-align: middle;
+  position: absolute;
+  top: 0;
+  left: 0;
+
   width: 27px;
   height: 23px;
-  padding: 0;
-  margin-right: 8px;
 
-  background-image: url("../img/checkbox.svg");
+  background-color: #c5c5c5;
   background-repeat: no-repeat;
 }
 
-.filter-checkbox:hover + label::before {
-  background-position-x: -30px;
+.filter-checkbox + label::before {
+  background-image: url("../img/checkbox-unchecked.svg");
 }
 
-.filter-checkbox:disabled + label::before {
-  background-position-x: -60px;
+.filter-checkbox:checked + label::after {
+  background-image: url("../img/checkbox-checked.svg");
 }
 
-.filter-checkbox:checked + label::before {
-  background-position-x: -90px;
+.filter-checkbox:hover + label::before,
+.filter-checkbox:checked:hover + label::after {
+  background-color: #b5b5b5;
 }
 
-.filter-checkbox:checked:hover + label::before {
-  background-position-x: -120px;
-}
-
-.filter-checkbox:checked:disabled + label::before {
-  background-position-x: -150px;
+.filter-checkbox:disabled + label::before,
+.filter-checkbox:checked:disabled + label::after {
+  background-color: #b5b5b5;
+  opacity: 0.3;
 }
 
 .form-filter input:disabled + label {
@@ -1125,7 +1131,7 @@ img {
   opacity: 0.3;
 }
 
-.content-form-filter button[type="submit"] {
+.form-filter button[type="submit"] {
   width: 140px;
   height: 38px;
   border: 1px solid #e5e5e5;
