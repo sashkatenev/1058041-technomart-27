@@ -10,14 +10,14 @@ body {
   color: #32425c;
 }
 
-a:focus {
-  outline: 1px solid #ee3643;
-}
-
 a {
   color: inherit;
 
   text-decoration: none;
+}
+
+a:focus {
+  outline: 1px solid #ee3643;
 }
 
 img {
@@ -41,6 +41,12 @@ input[type="radio"].visually-hidden {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.site-container {
+  width: 940px;
+  padding: 0 10px;
+  margin: 0 auto;
 }
 
 .site-section-title {
@@ -81,11 +87,14 @@ input[type="radio"].visually-hidden {
 
 /* header */
 .main-header {
-  background-color: #f1f5f7;
+  margin-bottom: 59px;
+
+  background-color: #f4f7f9;
 }
 
-    /* head-bar */
 .head-bar {
+  width: 100%;
+
   font-size: 17px;
   line-height: 1.06;
   color: #ffffff;
@@ -748,7 +757,6 @@ input[type="radio"].visually-hidden {
 /* Service-slider */
 .service-slider {
   box-sizing: border-box;
-  padding: 68px 0 0 130px;
 
   background-color: #f4f7f9;
 }
@@ -759,17 +767,20 @@ input[type="radio"].visually-hidden {
 
 .service-slider-list {
   position: relative;
+
   min-height: 282px;
   padding: 0;
   margin: 0;
 
   background-repeat: no-repeat;
-  background-position: bottom right;
+  background-position: right;
 
   list-style-type: none;
 }
 
 .service-slider-controls {
+  position: relative;
+
   width: 40%;
   min-width: 240px;
 }
