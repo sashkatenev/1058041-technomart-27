@@ -1,5 +1,6 @@
 /* General rules */
 body {
+  min-width: 960px;
   margin: 0;
   padding: 0;
   
@@ -25,7 +26,7 @@ img {
   height: auto;
 }
 
-.visually-hidden:not(:focus):not(:active),
+.visually-hidden,
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
   position: absolute;
@@ -62,7 +63,6 @@ input[type="radio"].visually-hidden {
   color: #000000;
 }
 
-  /* red site-button */
 .site-button {
   display: flex;
   justify-content: center;
@@ -92,17 +92,12 @@ input[type="radio"].visually-hidden {
 
 /* header */
 .main-header {
-  /*box-sizing: border-box;
-  width: 100%;*/
   margin-bottom: 59px;
 
   background-color: #f4f7f9;
 }
 
 .head-bar {
-  /*box-sizing: border-box;
-  width: 100%;*/
-
   font-size: 17px;
   line-height: 1.06;
   color: #ffffff;
@@ -135,8 +130,8 @@ input[type="radio"].visually-hidden {
   min-height: 42px;
   padding-top: 10px;
   padding-right: 15px;
-  padding-bottom: 10px;
-  padding-left: 18px;
+  padding-bottom: 12px;
+  padding-left: 17px;
 
   color: #ffffff;
 
@@ -156,16 +151,16 @@ input[type="radio"].visually-hidden {
 
 .search-container {
   display: flex;
-  width: 100%;
+}
+
+.form-search {
   flex-grow: 1;
 }
 
     /* search-field */
 .form-search input {
-  flex-grow: 1;
   order: 1;
 
-  /*padding: 11px 0 12px;*/
   padding-left: 5px;
 }
 
@@ -205,6 +200,8 @@ input[type="radio"].visually-hidden {
 }
 
 .head-button::before {
+  margin-right: 13px;
+
   line-height: 0;
 
   opacity: 0.3;
@@ -220,14 +217,17 @@ input[type="radio"].visually-hidden {
 
 .head-button-bookmark::before {
   content: url("../img/icon-bookmark.svg");
-  
-  margin-right: 13px;
+}
+
+.head-button-cart {
+  padding-left: 18px; /*perfect pixel*/
 }
 
 .head-button-cart::before {
   content: url("../img/icon-cart.svg");
   
-  margin-right: 17px;
+  margin-right: 16px; /*perfect pixel*/
+  margin-top: -2px; /*perfect pixel*/
 }
 
     /* Оформить заказ */
