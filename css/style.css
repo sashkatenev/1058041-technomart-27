@@ -98,6 +98,8 @@ input[type="radio"].visually-hidden {
 }
 
 .head-bar {
+  margin-bottom: 46px;
+
   font-size: 17px;
   line-height: 1.06;
   color: #ffffff;
@@ -186,11 +188,11 @@ input[type="radio"].visually-hidden {
   fill-opacity: 1;
 }
 
-.head-button[type="search"]:focus + .head-button-search:not(:hover) {
+.head-button[type="text"]:focus + .head-button-search:not(:hover) {
   background-color: #ffffff;
 }
 
-.head-button[type="search"]:focus + .head-button-search:not(:hover) path {
+.head-button[type="text"]:focus + .head-button-search:not(:hover) path {
   fill: #ee3643;
   fill-opacity: 1;
 }
@@ -220,17 +222,16 @@ input[type="radio"].visually-hidden {
 }
 
 .head-button-cart {
-  padding-left: 18px; /*perfect pixel*/
+  padding-left: 18px;
 }
 
 .head-button-cart::before {
   content: url("../img/icon-cart.svg");
   
-  margin-right: 16px; /*perfect pixel*/
-  margin-top: -2px; /*perfect pixel*/
+  margin-right: 16px;
+  margin-top: -2px;
 }
 
-    /* Оформить заказ */
 .head-button-order {
   padding-left: 20px;
   background-color: #63a63e;
@@ -246,7 +247,6 @@ input[type="radio"].visually-hidden {
   background-color: #518534;
 }
 
-    /* bookmarks, cart if not empty (red-bg) */
 .not-empty {
   background-color: #ee3643;
 }
@@ -260,7 +260,26 @@ input[type="radio"].visually-hidden {
 }
 
     /* header-content */
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  margin-bottom: 40px;
+}
+
+.header-content p,
+.header-content div {
+  box-sizing: border-box;
+  width: 300px;
+  margin: 0;
+}
+
 .header-title {
+  padding-top: 2px;
+  padding-right: 50px;
+  padding-left: 53px;
+
   font-style: italic;
   font-size: 16px;
   line-height: 1.44;
@@ -269,25 +288,42 @@ input[type="radio"].visually-hidden {
 
     /* tel */
 .header-contacts a {
-  padding-right: 45px;
-  padding-left: 74px;
-  border: solid 3px #ffffff;
+  display: inline-block;
+  vertical-align: middle;
+
+  box-sizing: border-box;
+  min-width: 270px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 71px;
+  margin-bottom: 4px;
 
   font-size: 21px;
   line-height: 1;
   color: #e9292a;
 
+  border: solid 3px #ffffff;
   background-color: transparent;
   background-image: url("../img/icon-phone.svg");
   background-repeat: no-repeat;
-  background-position: 15px 50%;
+  background-position: 12px 10px;
 }
 
 .header-contacts address {
+  max-width: 260px;
+  padding-left: 10px;
+
   font-size: 14px;
   line-height: 1.71;
   font-style: normal;
-  text-align: center;
+}
+
+.user-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  padding-left: 19px;
 }
 
 .user-navigation-hidden {
@@ -295,15 +331,25 @@ input[type="radio"].visually-hidden {
 }
 
 .user-button {
-  display: inline-block;
-  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-sizing: border-box;
+  padding-top: 12px;
+  padding-right: 20px;
+  padding-bottom: 12px;
+  padding-left: 20px;
 
   font-size: 21px;
   line-height: 1;
   color: #000000;
 
   background-color: #ffffff;
-  /*background-repeat: no-repeat;*/
+}
+
+.user-button svg {
+  flex-shrink: 0;
 }
 
 .user-button:hover,
@@ -323,13 +369,17 @@ input[type="radio"].visually-hidden {
 
     /* Войти */
 .user-button-log-in {
-  padding: 14px 27px 15px 14px;
-  margin-right: 10px;
+  justify-content: flex-start;
+
+  min-width: 121px;
+  max-width: 121px;
+
+  padding-left: 14px;
+  padding-right: 14px;
 }
 
 .user-button-log-in svg {
-  vertical-align: middle;
-  padding-right: 9px;
+  padding-right: 14px;
 
   fill: #c5c5c5;
 }
@@ -342,9 +392,10 @@ input[type="radio"].visually-hidden {
   fill: #c5c5c5;
 }
 
-    /* button Регистрация */
+    /* Регистрация */
 .user-button-registration {
-  padding: 14px 25px 15px;
+  min-width: 150px;
+  max-width: 150px;
 }
 
     /* link Равшан Джамшутович */
