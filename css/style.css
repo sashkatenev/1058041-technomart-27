@@ -92,13 +92,16 @@ input[type="radio"].visually-hidden {
 
 /* header */
 .main-header {
+  /*box-sizing: border-box;
+  width: 100%;*/
   margin-bottom: 59px;
 
   background-color: #f4f7f9;
 }
 
 .head-bar {
-  width: 100%;
+  /*box-sizing: border-box;
+  width: 100%;*/
 
   font-size: 17px;
   line-height: 1.06;
@@ -107,26 +110,37 @@ input[type="radio"].visually-hidden {
   background-color: #293449;
 }
 
+.head-bar .site-container {
+  display: flex;
+  align-items: flex-start;
+}
+
 .main-logo {
   width: 109px;
   padding-top: 13px;
   padding-right: 56px;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
   padding-left: 55px;
 
   border-radius: 0;
-  box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
+  box-shadow: 0px 5px 0 0 #b52933;
 }
 
 .head-button {
-  position: relative;
-  
-  display: inline-block;
-  vertical-align: middle;
-  border: none;
+  display: flex;
+  align-items: center;
+
+  box-sizing: border-box;
+  min-width: 150px;
+  min-height: 42px;
+  padding-top: 10px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+  padding-left: 18px;
 
   color: #ffffff;
 
+  border: none;
   background-color: #293449;
 }
 
@@ -140,9 +154,19 @@ input[type="radio"].visually-hidden {
   background-color: #161d29;
 }
 
+.search-container {
+  display: flex;
+  width: 100%;
+  flex-grow: 1;
+}
+
     /* search-field */
 .form-search input {
-  padding: 11px 0 12px;
+  flex-grow: 1;
+  order: 1;
+
+  /*padding: 11px 0 12px;*/
+  padding-left: 5px;
 }
 
 .form-search input:focus {
@@ -151,12 +175,11 @@ input[type="radio"].visually-hidden {
   background-color: #ffffff;
 }
 
-    /* Поиск */
 .head-button-search {
-  box-sizing: content-box;
-  width: 17px;
+  min-width: 40px;
   height: 17px;
-  padding: 12px 15px 13px 17px;
+  padding-right: 10px;
+  padding-left: 17px;
 }
 
 .head-button-search path {
@@ -182,7 +205,7 @@ input[type="radio"].visually-hidden {
 }
 
 .head-button::before {
-  position: absolute;
+  line-height: 0;
 
   opacity: 0.3;
 }
@@ -195,33 +218,20 @@ input[type="radio"].visually-hidden {
   opacity: 0.5;
 }
 
-    /* link Закладки */
-.head-button-bookmark {
-  padding-left: 44px;
-}
-
 .head-button-bookmark::before {
   content: url("../img/icon-bookmark.svg");
   
-  left: 17px;
-  top: calc(50% - 8px);
-}
-
-    /* link Корзина */
-.head-button-cart {
-  padding-left: 50px;
+  margin-right: 13px;
 }
 
 .head-button-cart::before {
   content: url("../img/icon-cart.svg");
   
-  left: 18px;
-  top: calc(50% - 7px);
+  margin-right: 17px;
 }
 
-    /* button Оформить заказ */
+    /* Оформить заказ */
 .head-button-order {
-  padding-right: 22px;
   padding-left: 20px;
   background-color: #63a63e;
 }
