@@ -480,12 +480,11 @@ input[type="radio"].visually-hidden {
   margin: 0;
 
   list-style-type: none;
-}
 
-.site-navigation li {
-  flex-grow: 1;
-  max-width: 170px;
-  margin-bottom: 1px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #32425c;
+  box-shadow: inset 0px -5px 0 0 #293449; 
 }
 
 .site-navigation a {
@@ -493,19 +492,14 @@ input[type="radio"].visually-hidden {
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  height: 100%;
   padding-top: 20px;
-  padding-right: 20px;
-  padding-bottom: 23px;
-  padding-left: 20px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+  padding-left: 31px;
 
   color: #ffffff;
   font-size: 17px;
   text-align: center;
-  line-height: 1;
-
-  background-color: #32425c;
-  box-shadow: inset 0px -5px 0 0 #293449;
 }
 
 .site-navigation a:hover {
