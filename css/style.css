@@ -92,7 +92,7 @@ input[type="radio"].visually-hidden {
 
 /* header */
 .main-header {
-  margin-bottom: 59px;
+  margin-bottom: 60px;
 
   background-color: #f4f7f9;
 }
@@ -265,7 +265,7 @@ input[type="radio"].visually-hidden {
   justify-content: space-between;
   align-items: flex-start;
 
-  margin-bottom: 40px;
+  margin-bottom: 39px;
 }
 
 .header-content p,
@@ -278,7 +278,7 @@ input[type="radio"].visually-hidden {
 .header-title {
   padding-top: 2px;
   padding-right: 50px;
-  padding-left: 53px;
+  padding-left: 52px;
 
   font-style: italic;
   font-size: 16px;
@@ -379,7 +379,7 @@ input[type="radio"].visually-hidden {
 }
 
 .user-button-log-in svg {
-  padding-right: 14px;
+  padding-right: 13px;
 
   fill: #c5c5c5;
 }
@@ -438,6 +438,13 @@ input[type="radio"].visually-hidden {
   fill: #c5c5c5;
 }
 
+.user-links {
+  padding: 0;
+  margin: 0;
+
+  list-style-type: none;
+}
+
 .user-links a {
   padding-right: 14px;
   padding-left: 15px;
@@ -467,24 +474,73 @@ input[type="radio"].visually-hidden {
 }
 
     /* site-navigation */
-.site-navigation li {
-  display: inline-block;
-
-  cursor: default;
-}
-
-.user-links,
 .site-navigation ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  padding: 0;
+  padding-bottom: 50px;
+  margin: 0;
+
   list-style-type: none;
 }
 
+.site-navigation li {
+  margin-bottom: 10px;
+}
+
 .site-navigation a {
+  display: block;
+  box-sizing: border-box;
+  padding-top: 20px;
+  padding-right: 15px;
+  padding-bottom: 23px;
+
   color: #ffffff;
   font-size: 17px;
   line-height: 1;
 
   background-color: #32425c;
   box-shadow: inset 0px -5px 0 0 #293449;
+}
+
+.site-navigation-item:nth-of-type(1) a {
+  width: 140px;
+  padding-left: 52px;
+}
+
+.site-navigation-item:nth-of-type(2) a {
+  width: 120px;
+  padding-left: 28px;
+}
+
+.site-navigation-item:nth-of-type(3) a {
+  width: 120px;
+  padding-left: 32px;
+}
+
+.site-navigation-item:nth-of-type(4) a {
+  width: 115px;
+  padding-left: 25px;
+}
+
+.site-navigation-item:nth-of-type(5) a {
+  width: 160px;
+  padding-left: 22px;
+}
+
+.site-navigation-item:nth-of-type(6) a {
+  width: 140px;
+  padding-left: 45px;
+}
+
+.site-navigation-item:nth-of-type(7) a {
+  padding-left: 28px;
+}
+.site-navigation-item:nth-of-type(7) {
+  flex-grow: 1;
 }
 
 .site-navigation a:hover {
