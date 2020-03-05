@@ -379,16 +379,13 @@ input[type="radio"].visually-hidden {
   margin-right: 10px;
 }
 
-.user-button-log-in svg {
+.user-button-log-in svg,
+.user-button-log-in:active path {
   fill: #c5c5c5;
 }
 
 .user-button-log-in:hover path {
   fill: #32425c;
-}
-
-.user-button-log-in:active path {
-  fill: #c5c5c5;
 }
 
     /* Регистрация */
@@ -478,70 +475,38 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  align-items: flex-start;
 
   padding: 0;
-  padding-bottom: 50px;
   margin: 0;
+  margin-bottom: 50px;
 
   list-style-type: none;
 }
 
 .site-navigation li {
-  margin-bottom: 10px;
+  flex-grow: 1;
+  max-width: 170px;
+  margin-bottom: 1px;
 }
 
 .site-navigation a {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   box-sizing: border-box;
+  height: 100%;
   padding-top: 20px;
-  padding-right: 15px;
+  padding-right: 20px;
   padding-bottom: 23px;
+  padding-left: 20px;
 
   color: #ffffff;
   font-size: 17px;
+  text-align: center;
   line-height: 1;
 
   background-color: #32425c;
   box-shadow: inset 0px -5px 0 0 #293449;
-}
-
-.site-navigation-item:nth-of-type(1) a {
-  width: 140px;
-  padding-left: 52px;
-}
-
-.site-navigation-item:nth-of-type(2) a {
-  width: 120px;
-  padding-left: 28px;
-}
-
-.site-navigation-item:nth-of-type(3) a {
-  width: 120px;
-  padding-left: 32px;
-}
-
-.site-navigation-item:nth-of-type(4) a {
-  width: 115px;
-  padding-left: 25px;
-}
-
-.site-navigation-item:nth-of-type(5) a {
-  width: 160px;
-  padding-left: 22px;
-}
-
-.site-navigation-item:nth-of-type(6) a {
-  width: 140px;
-  padding-left: 45px;
-}
-
-.site-navigation-item:nth-of-type(7) a {
-  padding-left: 28px;
-}
-
-.site-navigation-item:nth-of-type(7) {
-  flex-grow: 1;
 }
 
 .site-navigation a:hover {
@@ -1586,7 +1551,7 @@ input[type="radio"].visually-hidden {
 
   /* section content-summary ("О перфораторах") */
 .content-summary {
-  padding: 67px 159px 73px 130px;
+  /*padding: 67px 159px 73px 130px;*/
   background-color: #f4f7f9;
 }
 
@@ -1609,7 +1574,7 @@ input[type="radio"].visually-hidden {
   height: 23px;
   padding-top: 20px;
   padding-right: 41px;
-  padding-bottom: 25px;
+  padding-bottom: 20px;
   padding-left: 41px;
 }
 
