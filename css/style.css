@@ -162,6 +162,7 @@ input[type="radio"].visually-hidden {
     /* search-field */
 .form-search input {
   order: 1;
+  flex-grow: 1;
 
   padding-left: 5px;
 }
@@ -320,10 +321,9 @@ input[type="radio"].visually-hidden {
 
 .user-navigation {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   align-items: flex-start;
-
-  padding-left: 19px;
 }
 
 .user-navigation-hidden {
@@ -332,14 +332,16 @@ input[type="radio"].visually-hidden {
 
 .user-button {
   display: flex;
-  justify-content: center;
   align-items: center;
 
   box-sizing: border-box;
+  min-width: 40px;
+  max-width: 300px;
+  min-height: 45px;
   padding-top: 12px;
-  padding-right: 20px;
+  padding-right: 25px;
   padding-bottom: 12px;
-  padding-left: 20px;
+  margin-bottom: 8px;
 
   font-size: 21px;
   line-height: 1;
@@ -350,6 +352,9 @@ input[type="radio"].visually-hidden {
 
 .user-button svg {
   flex-shrink: 0;
+
+  margin-left: 14px;
+  margin-right: 14px;
 }
 
 .user-button:hover,
@@ -371,16 +376,10 @@ input[type="radio"].visually-hidden {
 .user-button-log-in {
   justify-content: flex-start;
 
-  min-width: 121px;
-  max-width: 121px;
-
-  padding-left: 14px;
-  padding-right: 14px;
+  margin-right: 10px;
 }
 
 .user-button-log-in svg {
-  padding-right: 13px;
-
   fill: #c5c5c5;
 }
 
@@ -394,18 +393,16 @@ input[type="radio"].visually-hidden {
 
     /* Регистрация */
 .user-button-registration {
-  min-width: 150px;
-  max-width: 150px;
+  padding-left: 25px;
 }
 
-    /* link Равшан Джамшутович */
+    /* Равшан Джамшутович */
 .user-button-profile {
-  padding: 14px 27px 11px 13px;
+  width: 259px;
 }
 
 .user-button-profile svg {
-  vertical-align: middle;
-  padding-right: 9px;
+  /*margin-left: 13px;*/
 
   fill: #c5c5c5;
 }
@@ -420,14 +417,14 @@ input[type="radio"].visually-hidden {
 
    /* logout-button */
 .user-button-log-out {
-  display: inline-block;  
-  box-sizing: content-box;
-  vertical-align: middle;
-  width: 20px;
-  height: 17px;
-  padding: 14px 10px;
+  padding-right: 0;
 
   fill: #c5c5c5;
+}
+
+.user-button-log-out svg {
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .user-button-log-out:hover path {
@@ -439,15 +436,17 @@ input[type="radio"].visually-hidden {
 }
 
 .user-links {
+  display: flex;
+
   padding: 0;
   margin: 0;
+  margin-left: 2px;
+  margin-right: auto;
 
   list-style-type: none;
 }
 
 .user-links a {
-  padding-right: 14px;
-  padding-left: 15px;
   font-size: 16px;
   line-height: 1.13;
 
@@ -457,7 +456,8 @@ input[type="radio"].visually-hidden {
     /* user-links-bullet */
 .user-links li {
   position: relative;
-  display: inline-block;
+  margin-left: 16px;
+  margin-right: 15px;
 }
 
 .user-links li:not(:first-child)::before {
@@ -465,7 +465,7 @@ input[type="radio"].visually-hidden {
 
   position: absolute;
   top: 7px;
-  left: 0;
+  left: -15px;
   width: 4px;
   height: 4px;
   border-radius: 50%;
@@ -539,6 +539,7 @@ input[type="radio"].visually-hidden {
 .site-navigation-item:nth-of-type(7) a {
   padding-left: 28px;
 }
+
 .site-navigation-item:nth-of-type(7) {
   flex-grow: 1;
 }
