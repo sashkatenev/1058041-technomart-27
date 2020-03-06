@@ -545,7 +545,7 @@ input[type="radio"].visually-hidden {
 
 .promo-item h3 {
   margin: 0;
-  margin-top: 20px;
+  margin-top: 21px;
   margin-bottom: 12px;
   margin-left: 23px;
   font-family: "Cuprum", "Arial", sans-serif;
@@ -822,53 +822,63 @@ input[type="radio"].visually-hidden {
 
 /* Popular brands */
 .popular-brands {
-  margin-bottom: 85px;
+  margin-bottom: 65px;
 
   background-color: #ffffff;
 }
 
 .brand-list {
-  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+
   padding: 0;
+
+  list-style-type: none;
 }
 
 .brand-item {
-  display: inline-block;
+  display: flex;
+
+  box-sizing: border-box;
   width: 220px;
   height: 145px;
   margin-right: 20px;
   margin-bottom: 20px;
   
-  line-height: 1;
-  text-align: center;
+  /*line-height: 1;*/
   
   background-color: #ffffff;
   border: 1px solid #eaeaea;
+}
+
+.brand-item:nth-child(4n) {
+  margin-right: 0;
 }
 
 .brand-item:hover {
   box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
 
-.brand-item a:active {
+.brand-item a:active,
+.brand-item img:active {
   opacity: 0.3;
 }
 
-.brand-item  a {
-  display: inline-block;
+.brand-item a {
   width: 100%;
-  height: 100%;
+
   line-height: 145px;
+  text-align: center;
 }
 
 .brand-item img {
   vertical-align: middle;
-  line-height: normal;
 }
 
 /* Service-slider */
 .service-slider {
   box-sizing: border-box;
+  padding-top: 66px;
 
   background-color: #f4f7f9;
 }
