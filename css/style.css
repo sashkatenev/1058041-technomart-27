@@ -58,9 +58,12 @@ input[type="radio"].visually-hidden {
 }
 
 .site-paragraph {
+  margin-top: 17px;
+  margin-bottom: 17px;
+
   font-family: "PT Sans Narrow", Arial, sans-serif;
   font-size: 13px;
-  line-height: 1.85;
+  line-height: 24px;
   color: #000000;
 }
 
@@ -876,10 +879,6 @@ input[type="radio"].visually-hidden {
   text-align: center;
 }
 
-.brand-item img:active {
-  /*opacity: 0.3;*/
-}
-
 .brand-item img {
   vertical-align: middle;
 }
@@ -887,24 +886,37 @@ input[type="radio"].visually-hidden {
 /* Service-slider */
 .service-slider {
   box-sizing: border-box;
-  padding-top: 66px;
+  padding-top: 64px;
+  margin-bottom: 78px;
 
   background-color: #f4f7f9;
 }
 
 .service-slider h2 {
+  margin-bottom: 26px;
   color: #000000;
+}
+
+.service-slider p {
+  width: 330px;
+}
+
+.service-slider-wrap {
+  display: flex;
+
+  margin-top: 70px;
 }
 
 .service-slider-list {
   position: relative;
 
-  min-height: 282px;
+  width: 100%;
+  min-height: 284px;
   padding: 0;
   margin: 0;
 
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: bottom right;
 
   list-style-type: none;
 }
@@ -912,12 +924,14 @@ input[type="radio"].visually-hidden {
 .service-slider-controls {
   position: relative;
 
-  width: 40%;
   min-width: 240px;
+  padding-bottom: 95px;
+  margin-right: 80px;
 }
 
 .service-slider-controls::after {
   content: url("../img/shadow.png");
+
   position: absolute;
   top: -46px;
   right: 0;
@@ -925,7 +939,10 @@ input[type="radio"].visually-hidden {
 
 .service-slider-controls label {
   display: block;
-  padding: 21px 0 20px 23px;
+  padding-top: 15px;
+  padding-right: 20px;
+  padding-bottom: 16px;
+  padding-left: 22px;
   margin-bottom: 1px;
 
   font-size: 21px;
@@ -964,7 +981,8 @@ input[type="radio"].visually-hidden {
 .service-slider-check01:checked ~ .service-slider-list li:nth-of-type(1),
 .service-slider-check02:checked ~ .service-slider-list li:nth-of-type(2),
 .service-slider-check03:checked ~ .service-slider-list li:nth-of-type(3) {
-  opacity: 1;
+  /*opacity: 1;*/
+  display: block;
 }
 
 .service-slider-check01:checked ~ .service-slider-list {
@@ -980,27 +998,31 @@ input[type="radio"].visually-hidden {
 }
 
 .service-slider-item {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
+  display: none;
 
   box-sizing: border-box;
-  width: 100%;
-  padding-bottom: 135px;
 }
 
 .service-slider-item h3 {
-  margin-bottom: 34px;
+  margin-top: -2px;
+  margin-bottom: 24px;
 
   font-size: 36px;
   line-height: 1;
 }
 
+.service-slider-item p {
+  width: 305px;
+  padding-bottom: 25px;
+}
+
+.service-slider-item:first-child p {
+  width: 224px;
+}
+
 .service-slider-item button {
   min-width: 195px;
-
-  font-size: 14px;
+  margin-bottom: 25px;
 }
 
 .service-slider::before,
