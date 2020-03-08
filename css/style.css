@@ -1045,6 +1045,11 @@ input[type="radio"].visually-hidden {
   background-color: #ffffff;
 }
 
+.catalog-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
   /* Catalog bread crumbs */
 .catalog-breadcrumbs {
   position: relative;
@@ -1106,6 +1111,7 @@ input[type="radio"].visually-hidden {
   padding-top: 9px;
   padding-bottom: 11px;
   padding-left: 18px;
+  margin-top: 0;
   margin-bottom: 11px;
 
   background-color: #f7f3ec;
@@ -1358,9 +1364,9 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-sort-bar {
-  padding-top: 9px;
-  padding-bottom: 11px;
+  padding-top: 10px;
   padding-right: 18px;
+  padding-bottom: 10px;
   padding-left: 18px;
 }
 
@@ -1378,12 +1384,16 @@ input[type="radio"].visually-hidden {
   list-style-type: none;
 }
 
+.catalog-sort-bar li {
+  max-width: 95px;
+}
+
 .catalog-sort-bar .sort-bar-byproperty {
-  margin-right: 46px;
+  margin-right: 70px;
 }
 
 .sort-bar-byproperty li:not(:last-child) {
-  margin-right: 65px;
+  margin-right: 75px;
 }
 
 .sort-bar-byproperty a {
