@@ -1049,8 +1049,14 @@ input[type="radio"].visually-hidden {
 .content-breadcrumbs {
   position: relative;
 
+  display: flex;
+
+  padding: 21px 0 20px;
+  margin: 0;
+  margin-left: -1px;
+
   font-family: "PT Sans Narrow", Arial, sans-serif;
-  font-family: 13px;
+  font-size: 13px;
   line-height: 1.38;
   color: #000000;
 
@@ -1060,14 +1066,13 @@ input[type="radio"].visually-hidden {
 }
 
 .content-breadcrumbs li {
-  display: inline-block;
+  margin-right: 18px;
 }
 
 .content-breadcrumbs li:not(:last-child)::after {
   content: url("../img/icon-right-small.svg");
 
-  padding-right: 15px;
-  padding-left: 18px;
+  margin-left: 15px;
 
   width: 8px;
   height: 12px;
