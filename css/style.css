@@ -62,7 +62,7 @@ input[type="radio"].visually-hidden {
   margin-top: 25px;
   margin-bottom: 20px;
 
-  font-family: "PT Sans Narrow", Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
   color: #000000;
@@ -1062,7 +1062,7 @@ input[type="radio"].visually-hidden {
   margin: 0;
   margin-left: -1px;
 
-  font-family: "PT Sans Narrow", Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 1.38;
   color: #000000;
@@ -1095,9 +1095,8 @@ input[type="radio"].visually-hidden {
   background-color: #f2f6f8;
 }
 
-  /* Filter-form */
 .catalog-columns {
-  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 1.38;
   color: #000000;
@@ -1105,6 +1104,7 @@ input[type="radio"].visually-hidden {
   text-transform: uppercase;
 }
 
+  /* Filter-form */
 .form-filter {
   width: 220px;
 }
@@ -1135,7 +1135,7 @@ input[type="radio"].visually-hidden {
 .form-filter legend {
   margin-bottom: 14px;
 
-  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  /*font-family: "PT Sans", "Arial", sans-serif;*/
   font-size: 17px;
   line-height: 1.76;
   font-weight: 700;
@@ -1510,7 +1510,7 @@ input[type="radio"].visually-hidden {
 
   font-size: 18px;
   line-height: 1.11;
-  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  /*font-family: "PT Sans", "Arial", sans-serif;*/
   font-weight: 700;
   color: #000000;
 }
@@ -1544,6 +1544,7 @@ input[type="radio"].visually-hidden {
   padding: 8px;
   margin-bottom: 8px;
 
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   line-height: 1.29;
 
@@ -1624,7 +1625,7 @@ input[type="radio"].visually-hidden {
 
 .product-oldprice,
 .product-actualprice {
-  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  /*font-family: "PT Sans", "Arial", sans-serif;*/
   font-size: 17px;
   line-height: 1.06;
   font-weight: 700;
@@ -1991,3 +1992,4 @@ input[type="radio"].visually-hidden {
 .socials-insta a {
   background-image: url("../img/icon-insta.svg");
 }
+
