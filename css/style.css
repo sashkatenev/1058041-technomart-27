@@ -1049,7 +1049,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   justify-content: space-between;
 
-  margin-bottom: 60px;
+  margin-bottom: 61px;
 }
 
   /* Catalog bread crumbs */
@@ -1468,6 +1468,8 @@ input[type="radio"].visually-hidden {
   
   background-color: #ffffff;
   border: 1px solid #e5e5e5;
+
+  text-transform: none;
 }
 
 .popular-products .product-item:nth-child(4n) {
@@ -1510,6 +1512,7 @@ input[type="radio"].visually-hidden {
   line-height: 1.11;
   font-family: "PT Sans Narrow", "Arial", sans-serif;
   font-weight: 700;
+  color: #000000;
 }
 
 .product-actions {
@@ -1684,6 +1687,8 @@ input[type="radio"].visually-hidden {
   padding-right: 10px;
   padding-bottom: 9px;
   padding-left: 10px;
+
+  font-size: 13px;
   color: #000000;
 
   background-color: transparent;
@@ -1799,23 +1804,18 @@ input[type="radio"].visually-hidden {
   padding-left: 24px;
 }
 
-  /* catalog-summary ("О перфораторах") */
+  /* "О перфораторах" */
 .catalog-summary {
-  /*padding: 67px 159px 73px 130px;*/
+  padding-top: 64px;
+  padding-bottom: 50px;
+
   background-color: #f4f7f9;
 }
 
 .catalog-summary h2 {
-  padding: 0;
-  margin-bottom: 41px;
+  margin-bottom: 25px;
 
-  /*font-family: "Cuprum", "Arial", sans-serif;*/
   color: #000000;
-  font-weight: 400;
-}
-
-.catalog-summary p {
-  /*padding: 0;*/
 }
 
 /* footer */
@@ -1907,14 +1907,14 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-bar {
-  padding-top: 32px;
-  padding-bottom: 29px;
+  padding-top: 31px;
+  padding-bottom: 28px;
   background-color: #293449;
 }
 
 .footer-bar .site-container {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   
   font-size: 16px;
   line-height: 1.13;
