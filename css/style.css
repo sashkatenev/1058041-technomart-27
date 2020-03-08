@@ -1048,6 +1048,8 @@ input[type="radio"].visually-hidden {
 .catalog-columns {
   display: flex;
   justify-content: space-between;
+
+  margin-bottom: 60px;
 }
 
   /* Catalog bread crumbs */
@@ -1433,7 +1435,6 @@ input[type="radio"].visually-hidden {
   /* Popular-products, Product-list */
 .catalog-products {
   width: 700px;
-  margin-bottom: 21px;
 
   background-color: #ffffff;
 }
@@ -1445,6 +1446,7 @@ input[type="radio"].visually-hidden {
 
   padding: 0;
   margin: 0;
+  margin-bottom: 32px;
 
   list-style-type: none;
 }
@@ -1664,31 +1666,25 @@ input[type="radio"].visually-hidden {
 
   /* paginator */
 .catalog-paginator-list {
-  font-family: "PT Sans Narrow", "Arial", sans-serif;
-  font-size: 13px;
-  color: #000000;
-
-  text-transform: uppercase;
+  display: flex;
+  padding: 0;
+  margin: 0;
 
   list-style-type: none;
 }
 
 .catalog-paginator-item {
-  display: inline-block;
-
-  text-align: center;
+  margin-right: 10px;
 }
 
 .catalog-paginator-item a {
-  display: inline-block;
-  min-width: 38px;
-  height: 38px;
-  margin-right: 10px;
   box-sizing: border-box;
-  padding: 15px;
-  padding-top: 12px;
-
-  line-height: 1;
+  min-width: 38px;
+  padding-top: 9px;
+  padding-right: 10px;
+  padding-bottom: 9px;
+  padding-left: 10px;
+  color: #000000;
 
   background-color: transparent;
   border: 1px solid #e5e5e5;
@@ -1696,10 +1692,12 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-paginator-item a:hover {
+  background-color: transparent;
   border-color: #bdc6ca;
 }
 
 .catalog-paginator-item a:active {
+  background-color: transparent;
   border-color: #ee3643;
 }
 
