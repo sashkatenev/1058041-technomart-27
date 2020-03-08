@@ -1769,7 +1769,7 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-navigation-contacts {
-  max-width: 330px;
+  max-width: 335px;
   margin-left: 3px;
   margin-bottom: 30px; 
 }
@@ -1833,11 +1833,56 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-bar {
+  padding-top: 32px;
+  padding-bottom: 29px;
+  background-color: #293449;
+}
+
+.footer-bar .site-container {
+  display: flex;
+  align-items: flex-start;
+  
   font-size: 16px;
   line-height: 1.13;
   color: #ffffff;
+}
 
-  background-color: #293449;
+.footer-bar p {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.footer-bar-copyright {
+  max-width: 245px;
+  margin-right: 25px;
+  margin-left: 1px;
+}
+
+.footer-bar-feedback {
+  max-width: 160px;
+  margin-right: 28px;
+}
+
+.footer-bar-developer {
+  max-width: 105px;
+  margin-right: 6px;
+}
+
+.footer-bar-socials {
+  justify-content: flex-start;
+
+  max-width: 132px;
+  margin: 0 auto;
+}
+
+.footer-bar-socials li:not(:nth-child(3n)) {
+  margin-right: 3px;
+}
+
+.footer-bar-socials li:nth-child(3n+4) {
+  margin-top: 3px;
 }
 
 .footer-bar a:active {
@@ -1848,13 +1893,13 @@ input[type="radio"].visually-hidden {
   display: block;
   width: 42px;
   height: 42px;
-  border-radius: 50%;
 
   font-size: 0;
 
   background-color: #212a3a;
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  border-radius: 50%;
 }
 
 .footer-bar-socials a:hover {
