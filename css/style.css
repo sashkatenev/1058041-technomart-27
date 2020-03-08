@@ -1,4 +1,3 @@
-@import url("fonts.css");
 /* General rules */
 body {
   min-width: 960px;
@@ -25,6 +24,8 @@ a:focus {
 img {
   max-width: 100%;
   height: auto;
+
+  line-height: 0;
 }
 
 .visually-hidden,
@@ -58,8 +59,8 @@ input[type="radio"].visually-hidden {
 }
 
 .site-paragraph {
-  margin-top: 17px;
-  margin-bottom: 17px;
+  margin-top: 25px;
+  margin-bottom: 20px;
 
   font-family: "PT Sans Narrow", Arial, sans-serif;
   font-size: 13px;
@@ -813,6 +814,7 @@ input[type="radio"].visually-hidden {
   padding-top: 26px;
   padding-bottom: 25px;
   padding-left: 28px;
+  margin-top: 1px;
   margin-bottom: 20px;
   background-color: #f9f5f0;
 }
@@ -886,14 +888,13 @@ input[type="radio"].visually-hidden {
 /* Service-slider */
 .service-slider {
   box-sizing: border-box;
-  padding-top: 64px;
-  margin-bottom: 78px;
+  padding-top: 65px;
 
   background-color: #f4f7f9;
 }
 
 .service-slider h2 {
-  margin-bottom: 26px;
+  margin-bottom: 25px;
   color: #000000;
 }
 
@@ -981,7 +982,6 @@ input[type="radio"].visually-hidden {
 .service-slider-check01:checked ~ .service-slider-list li:nth-of-type(1),
 .service-slider-check02:checked ~ .service-slider-list li:nth-of-type(2),
 .service-slider-check03:checked ~ .service-slider-list li:nth-of-type(3) {
-  /*opacity: 1;*/
   display: block;
 }
 
@@ -1361,10 +1361,6 @@ input[type="radio"].visually-hidden {
 }
 
   /* Popular-products, Product-list */
-.popular-products {
-  margin-bottom: 1px;
-}
-
 .content-products {
   margin-bottom: 21px;
   background-color: #ffffff;
@@ -1377,7 +1373,6 @@ input[type="radio"].visually-hidden {
 
   padding: 0;
   margin: 0;
-  /*margin-top: 21px;*/
 
   list-style-type: none;
 }
@@ -1416,6 +1411,8 @@ input[type="radio"].visually-hidden {
 .product-view {
   display: flex;
   flex-direction: column;
+
+  max-width: 100%;  /*ie11*/
 }
 
 .product-picture {
@@ -1425,9 +1422,11 @@ input[type="radio"].visually-hidden {
 
 .product-title {
   order: 1;
-  margin: 0;
+
+  margin-top: 0;
+  margin-right: 32px;
   margin-bottom: 12px;
-  padding: 0 32px;
+  margin-left: 32px;
 
   font-size: 18px;
   line-height: 1.11;
@@ -1642,23 +1641,91 @@ input[type="radio"].visually-hidden {
   padding-left: 32px;
 }
 
-/* section About company (index.html) */
+/* About company */
 .main-company {
+  display: flex;
+  justify-content: space-between;
+
+  padding-top: 54px;
+  padding-bottom: 86px;
+
   color: #000000;
 
   background-color: #ffffff;
 }
 
+.main-company-description {
+  width: 480px;
+}
+
+.main-company-contacts {
+  width: 300px;
+}
+
+.main-company h2 {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.company-description-partners {
+  margin: 0;
+  padding-left: 36px;  
+  margin-top: 21px;
+  margin-bottom: 36px;
+}
+
 .company-description-partners li {
-  padding-left: 2px;
+  position: relative;
+  margin-bottom: 20px;
 
   font-size: 18px;
   line-height: 1.11;
 
-  list-style-image: url("../img/icon-bullet-marker.svg");
+  list-style-type: none;
 }
 
-  /* section content-summary ("О перфораторах") */
+.company-description-partners li::before {
+  content: "";
+
+  position: absolute;
+  left: -36px;
+  top: 9px;
+
+  width: 23px;
+
+  background-color: #ee3643;
+  border: 1px solid #ee3643;
+}
+
+.main-company-description p {
+  width: 450px;
+}
+
+.main-company-description a {
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  min-width: 220px;
+}
+
+.main-company-contacts p {
+  width: 175px;
+}
+
+.map-container {
+  width: 100%;
+  height: 158px;
+  margin-top: 32px;
+  margin-bottom: 40px;
+
+  border-color: #eeebe4;
+}
+
+.main-company-contacts a.site-button {
+  padding-left: 24px;
+}
+
+  /* content-summary ("О перфораторах") */
 .content-summary {
   /*padding: 67px 159px 73px 130px;*/
   background-color: #f4f7f9;
