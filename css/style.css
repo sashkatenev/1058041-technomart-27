@@ -1362,6 +1362,7 @@ input[type="radio"].visually-hidden {
 
   /* Popular-products, Product-list */
 .content-products {
+  width: 700px;
   margin-bottom: 21px;
   background-color: #ffffff;
 }
@@ -1396,7 +1397,11 @@ input[type="radio"].visually-hidden {
   border: 1px solid #e5e5e5;
 }
 
-.product-item:nth-child(4n) {
+.popular-products .product-item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.content-products .product-item:nth-child(3n) {
   margin-right: 0;
 }
 
@@ -1412,7 +1417,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-direction: column;
 
-  max-width: 100%;  /*ie11*/
+  max-width: 100%;  /* for ie11 */
 }
 
 .product-picture {
