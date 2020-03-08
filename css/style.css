@@ -1041,12 +1041,12 @@ input[type="radio"].visually-hidden {
 }
 
 /* catalog main */
-.content {
+.catalog {
   background-color: #ffffff;
 }
 
   /* Catalog bread crumbs */
-.content-breadcrumbs {
+.catalog-breadcrumbs {
   position: relative;
 
   display: flex;
@@ -1065,11 +1065,11 @@ input[type="radio"].visually-hidden {
   list-style-type: none;
 }
 
-.content-breadcrumbs li {
+.catalog-breadcrumbs li {
   margin-right: 18px;
 }
 
-.content-breadcrumbs li:not(:last-child)::after {
+.catalog-breadcrumbs li:not(:last-child)::after {
   content: url("../img/icon-right-small.svg");
 
   margin-left: 15px;
@@ -1089,9 +1089,7 @@ input[type="radio"].visually-hidden {
 }
 
   /* Filter-form */
-.form-filter {
-  width: 220px;
-
+.catalog-columns {
   font-family: "PT Sans Narrow", "Arial", sans-serif;
   font-size: 13px;
   line-height: 1.38;
@@ -1100,7 +1098,11 @@ input[type="radio"].visually-hidden {
   text-transform: uppercase;
 }
 
-.catalog-columns p {
+.form-filter {
+  width: 220px;
+}
+
+.form-filter p {
   padding-top: 9px;
   padding-bottom: 11px;
   padding-left: 18px;
@@ -1335,9 +1337,6 @@ input[type="radio"].visually-hidden {
   padding-left: 10px;
   margin-top: 38px;
 
-  /*font-size: 13px;
-  color: #000000;*/
-
   background-color: transparent;
   border: 1px solid #e5e5e5;
   border-radius: 3px;
@@ -1346,24 +1345,45 @@ input[type="radio"].visually-hidden {
 }
 
   /* sort-bar */
-.content-sort-bar {
-  font-family: "PT Sans Narrow", "Arial", sans-serif;
-  font-size: 13px;
-  line-height: 1.38;
-  color: #000000;
+.catalog-sort-bar {
+  display: flex;
+  align-items: center;
+
+  box-sizing: border-box;
+  width: 700px;
+  margin-bottom: 20px;
 
   background-color: #f7f3ec;
-  text-transform: uppercase;
+  border-radius: 3px;
 }
 
-.content-sort-bar ul {
+.catalog-sort-bar {
+  padding-top: 9px;
+  padding-bottom: 11px;
+  padding-right: 18px;
+  padding-left: 18px;
+}
+
+.catalog-sort-bar p {
+  margin: 0;
+  margin-right: auto;
+}
+
+.catalog-sort-bar ul {
+  display: flex;
+
   padding: 0;
+  margin: 0;
   
   list-style-type: none;
 }
 
-.content-sort-bar li {
-  display: inline-block;
+.catalog-sort-bar .sort-bar-byproperty {
+  margin-right: 46px;
+}
+
+.sort-bar-byproperty li:not(:last-child) {
+  margin-right: 65px;
 }
 
 .sort-bar-byproperty a {
@@ -1384,6 +1404,10 @@ input[type="radio"].visually-hidden {
   color: #ee3643;
 }
 
+.sort-bar-bydirection li:first-child {
+  margin-right: 20px;
+}
+
 .sort-direction path {
   fill: #c5c5c5;
 }
@@ -1397,9 +1421,10 @@ input[type="radio"].visually-hidden {
 }
 
   /* Popular-products, Product-list */
-.content-products {
+.catalog-products {
   width: 700px;
   margin-bottom: 21px;
+
   background-color: #ffffff;
 }
 
@@ -1437,7 +1462,7 @@ input[type="radio"].visually-hidden {
   margin-right: 0;
 }
 
-.content-products .product-item:nth-child(3n) {
+.catalog-products .product-item:nth-child(3n) {
   margin-right: 0;
 }
 
@@ -1628,7 +1653,7 @@ input[type="radio"].visually-hidden {
 }
 
   /* paginator */
-.content-paginator-list {
+.catalog-paginator-list {
   font-family: "PT Sans Narrow", "Arial", sans-serif;
   font-size: 13px;
   color: #000000;
@@ -1638,13 +1663,13 @@ input[type="radio"].visually-hidden {
   list-style-type: none;
 }
 
-.content-paginator-item {
+.catalog-paginator-item {
   display: inline-block;
 
   text-align: center;
 }
 
-.content-paginator-item a {
+.catalog-paginator-item a {
   display: inline-block;
   min-width: 38px;
   height: 38px;
@@ -1660,15 +1685,15 @@ input[type="radio"].visually-hidden {
   border-radius: 4px;
 }
 
-.content-paginator-item a:hover {
+.catalog-paginator-item a:hover {
   border-color: #bdc6ca;
 }
 
-.content-paginator-item a:active {
+.catalog-paginator-item a:active {
   border-color: #ee3643;
 }
 
-.content-paginator-item.paginator-item-current a {
+.catalog-paginator-item.paginator-item-current a {
   border-color: #ee3643;
 
   color: #ffffff;
@@ -1766,13 +1791,13 @@ input[type="radio"].visually-hidden {
   padding-left: 24px;
 }
 
-  /* content-summary ("О перфораторах") */
-.content-summary {
+  /* catalog-summary ("О перфораторах") */
+.catalog-summary {
   /*padding: 67px 159px 73px 130px;*/
   background-color: #f4f7f9;
 }
 
-.content-summary h2 {
+.catalog-summary h2 {
   padding: 0;
   margin-bottom: 41px;
 
@@ -1781,7 +1806,7 @@ input[type="radio"].visually-hidden {
   font-weight: 400;
 }
 
-.content-summary p {
+.catalog-summary p {
   /*padding: 0;*/
 }
 
