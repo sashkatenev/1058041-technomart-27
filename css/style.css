@@ -1049,7 +1049,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   justify-content: space-between;
 
-  margin-bottom: 61px;
+  margin-bottom: 60px;
 }
 
   /* Catalog bread crumbs */
@@ -1680,14 +1680,15 @@ input[type="radio"].visually-hidden {
 
   box-sizing: border-box;
   min-width: 38px;
+  min-height: 38px;
   padding-top: 9px;
   padding-right: 10px;
-  padding-bottom: 9px;
+  padding-bottom: 10px;
   padding-left: 10px;
 
   text-align: center;
 
-  background-color: transparent;
+  background-color: #ffffff;
   border: 1px solid #e5e5e5;
   border-radius: 3px;
 
@@ -1997,3 +1998,118 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/icon-insta.svg");
 }
 
+/* modals */
+.modal-window {
+  display: flex;
+  flex-direction: column;
+
+  position: absolute;
+
+  /*display: none;*/
+  left: 50%;
+
+  width: 620px;
+
+  background: linear-gradient(to top,  #f1f1f1 112px, #ffffff 10px);
+  border-top: 7px solid #ee3643;
+  box-shadow: 0px 20px 40px 0 rgba(41, 52, 73, 0.75);
+
+  transform: translateX(-50%);
+}
+
+.modal-message {
+  font-size: 30px;
+  line-height: 1;
+  color: #000000;
+
+  padding-top: 65px;
+  padding-left: 179px;
+  margin: 0;
+}
+
+.modal-button-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-sizing: border-box;
+  padding-right: 80px;
+  padding-left: 80px;
+  margin-top: auto;
+  margin-bottom: 37px;
+
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 10px;
+  right: 6px;
+
+  width: 23px;
+  max-width: 23px;
+  height: 23px;
+
+  font-size: 0;
+
+  background-color: transparent;
+  border: none;
+}
+
+.modal-close-button::before,
+.modal-close-button::after {
+  content: "";
+
+  position: absolute;
+  top: 8px;
+  left: -5px;
+
+  width: 29px;
+  height: 4px;
+
+  background-color: #ee3643;
+
+  transform: rotate(45deg);
+}
+
+.modal-close-button::before {
+  transform: rotate(45deg); 
+}
+
+.modal-close-button::after {
+  transform: rotate(-45deg);
+}
+
+.modal-close-button:hover::before,
+.modal-close-button:hover::after {
+  background-color: #ca2c37;
+}
+
+.modal-close-button:active::before,
+.modal-close-button:hover::after {
+  background-color: #ba2732;
+}
+
+.modal-shopping-cart {
+  top: 411px;
+
+  height: 275px;
+}
+
+.modal-shopping-cart::before {
+  content: url("../img/icon-modal-check.svg");
+
+  position: absolute;
+  top: 48px;
+  left: 81px;
+
+  width: 66px;
+  height: 66px;
+
+  z-index: -1;
+}
+
+.modal-shopping-cart button:not(.modal-close-button) {
+  min-width: 220px;
+}
