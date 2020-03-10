@@ -1016,7 +1016,7 @@ input[type="radio"].visually-hidden {
 }
 
 .service-slider-item:first-of-type p {
-  width: 280px;
+  width: 275px;
 }
 
 .service-slider-item button {
@@ -1502,9 +1502,9 @@ input[type="radio"].visually-hidden {
   order: 1;
 
   margin-top: 0;
-  margin-right: 25px;
+  margin-right: 20px;
   margin-bottom: 12px;
-  margin-left: 25px;
+  margin-left: 20px;
 
   font-size: 18px;
   line-height: 1.11;
@@ -1683,7 +1683,7 @@ input[type="radio"].visually-hidden {
   min-height: 38px;
   padding-top: 9px;
   padding-right: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 9px;
   padding-left: 10px;
 
   text-align: center;
@@ -1731,7 +1731,7 @@ input[type="radio"].visually-hidden {
 }
 
 .main-company-description {
-  width: 480px;
+  width: 560px;
 }
 
 .main-company-contacts {
@@ -2000,43 +2000,32 @@ input[type="radio"].visually-hidden {
 
 /* modals */
 .modal-window {
-  display: flex;
-  flex-direction: column;
+  position: fixed;
 
-  position: absolute;
-
-  /*display: none;*/
   left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 
+  box-sizing: border-box;
   width: 620px;
+  padding-right: 80px;
+  padding-left: 80px;
+  padding-bottom: 37px;
 
   background: linear-gradient(to top,  #f1f1f1 112px, #ffffff 10px);
   border-top: 7px solid #ee3643;
   box-shadow: 0px 20px 40px 0 rgba(41, 52, 73, 0.75);
-
-  transform: translateX(-50%);
-}
-
-.modal-message {
-  font-size: 30px;
-  line-height: 1;
-  color: #000000;
-
-  padding-top: 65px;
-  padding-left: 179px;
-  margin: 0;
 }
 
 .modal-button-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  align-self: stretch;
 
   box-sizing: border-box;
-  padding-right: 80px;
-  padding-left: 80px;
+  width: 100%;
   margin-top: auto;
-  margin-bottom: 37px;
 
   font-size: 14px;
   line-height: 18px;
@@ -2092,9 +2081,21 @@ input[type="radio"].visually-hidden {
 }
 
 .modal-shopping-cart {
-  top: 411px;
+  display: flex;
+  flex-direction: column;
 
-  height: 275px;
+  min-height: 282px;
+  padding-top: 55px;
+}
+
+.shopping-cart-message {
+  font-size: 30px;
+  line-height: 1;
+  color: #000000;
+
+  padding-top: 10px;
+  padding-left: 99px;
+  margin: 0;
 }
 
 .modal-shopping-cart::before {
@@ -2112,4 +2113,78 @@ input[type="radio"].visually-hidden {
 
 .modal-shopping-cart button:not(.modal-close-button) {
   min-width: 220px;
+}
+
+.modal-feedback {
+  display: flex;
+
+  height: 430px;
+  padding-top: 37px;
+}
+
+.modal-feedback-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-items-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.modal-feedback-form p {
+  margin-top: 0;
+  margin-bottom: 11px;
+}
+
+.modal-feedback-form p:first-child {
+  margin-right: 20px;
+}
+
+.modal-feedback-form label {
+  display: block;
+  margin: 10px 0;
+
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.modal-feedback-form input,
+.modal-feedback-form textarea {
+  box-sizing: border-box;
+  padding: 8px 15px;
+
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  color: #999999;
+
+  border: 2px solid #d7dcde;
+  border-radius: 3px;
+}
+
+.modal-feedback-form input:hover,
+.modal-feedback-form textarea:hover {
+  border-color: #b5b5b5;
+}
+
+.modal-feedback-form input:focus,
+.modal-feedback-form textarea:focus {
+  border-color: #ee3643;
+}
+
+.modal-feedback-form input {
+  width: 220px;
+}
+
+.modal-feedback-form textarea {
+  width: 460px;
+  min-height: 114px;
+
+  resize: none;
+}
+
+.modal-feedback-form button[type="submit"] {
+  width: 100%;
 }
