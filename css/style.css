@@ -2020,7 +2020,6 @@ input[type="radio"].visually-hidden {
 .popup-button-wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 
   box-sizing: border-box;
   width: 100%;
@@ -2036,7 +2035,6 @@ input[type="radio"].visually-hidden {
   right: 6px;
 
   width: 23px;
-  max-width: 23px;
   height: 23px;
 
   font-size: 0;
@@ -2059,10 +2057,6 @@ input[type="radio"].visually-hidden {
   background-color: #ee3643;
 
   transform: rotate(45deg);
-}
-
-.popup-close-button::before {
-  transform: rotate(45deg); 
 }
 
 .popup-close-button::after {
@@ -2115,21 +2109,23 @@ input[type="radio"].visually-hidden {
 }
 
 .popup-feedback {
+  /*display: none;*/
   display: flex;
 
-  height: 430px;
+  min-height: 430px;
   padding-top: 37px;
 }
 
 .popup-feedback-form {
   display: flex;
   flex-direction: column;
+
+  width: 100%;  /* for ie11 */
 }
 
 .form-items-wrapper {
   display: flex;
   flex-wrap: wrap;
-  align-content: flex-start;
 }
 
 .popup-feedback-form p {
@@ -2186,4 +2182,14 @@ input[type="radio"].visually-hidden {
 
 .popup-feedback-form button[type="submit"] {
   width: 100%;
+}
+
+.popup-map {
+  display: none;
+
+  width: 940px;
+  height: 446.2px;
+  padding: 0;
+
+  border: none;
 }
