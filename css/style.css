@@ -17,10 +17,6 @@ a {
   text-decoration: none;
 }
 
-/*a:focus {
-  outline: 2px solid #ee3643;
-}*/
-
 img {
   max-width: 100%;
   height: auto;
@@ -1065,9 +1061,11 @@ input[type="radio"].visually-hidden {
   width: 275px;
 }
 
-.service-slider-item button {
+.service-slider-item a {
+  display: inline-flex;
+  box-sizing: border-box;
   min-width: 195px;
-  margin-top: 25px;
+  margin-top: 10px;
   margin-bottom: 25px;
 }
 
