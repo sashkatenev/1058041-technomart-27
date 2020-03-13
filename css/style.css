@@ -2323,3 +2323,11 @@ input[type="radio"].visually-hidden {
   background-color: #eeeae3;
   border: none;
 }
+
+.popup-show-block {
+  display: block;
+}
+
+.popup-show-flex {
+  display: flex;
+}
