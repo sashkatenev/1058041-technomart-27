@@ -10,6 +10,7 @@ let userButtonLogout = document.querySelector(".user-button-log-out");
 let popupShoppingCart = document.querySelector(".popup-shopping-cart");
 
 let popupShoppingCartCloseButton = popupShoppingCart.querySelector(".popup-close-button");
+let continueShoppingButton = popupShoppingCart.querySelector("[id=continue_shopping]");
 
 let userNavigationBlocks = document.querySelectorAll(".user-navigation");
 let userNavigationHandler = null;
@@ -22,6 +23,11 @@ for( let i = 0; i < buttonsBuy.length; i++) {
 };
 
 popupShoppingCartCloseButton.addEventListener("click", function(evt) {
+  evt.preventDefault();
+  popupShoppingCart.classList.remove("popup-show-flex");
+});
+
+continueShoppingButton.addEventListener("click", function(evt) {
   evt.preventDefault();
   popupShoppingCart.classList.remove("popup-show-flex");
 });
