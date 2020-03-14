@@ -2194,7 +2194,6 @@ input[type="radio"].visually-hidden {
 
 .popup-shopping-cart {
   display: none;
-  /*display: flex;*/
   flex-direction: column;
 
   min-height: 282px;
@@ -2235,7 +2234,6 @@ input[type="radio"].visually-hidden {
 
 .popup-feedback {
   display: none;
-  /*display: flex;*/
 
   min-height: 430px;
   padding-top: 37px;
@@ -2312,7 +2310,6 @@ input[type="radio"].visually-hidden {
 }
 
 .popup-map {
-  /*display: block;*/
   display: none;
 
   width: 940px;
