@@ -15,8 +15,37 @@ let popupShoppingCartCloseButton = popupShoppingCart.querySelector(".popup-close
 let continueShoppingButton = popupShoppingCart.querySelector("[id=continue_shopping]");
 let popupFeedbackCloseButton = null;
 
+let feedbackForm = null;
+let feedbackUserName = null;
+let feedbackUserEmail = null;
+let feedbackUserLetter = null;
+let userNameText = "";
+let userEmailText = "";
+let isStorageSupport = true;
+
+let closeButtonHandler = null;
 let userNavigationBlocks = document.querySelectorAll(".user-navigation");
 let userNavigationHandler = null;
+
+
+function setCloseButtonHandler(popup, btn) {
+  btn.addEventListener("click", function(evt) {
+    evt.preventDefault();
+    popup.classList.remove("popup-show-flex");
+    popup.classList.remove("popup-show-block");
+  });
+}
+
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    evt.preventDefault();
+    let popups = document.querySelectorAll(".popup-window");
+    for (let i = 0; i < popups.length; i++) {
+      popups[i].classList.remove("popup-show-flex");
+      popups[i].classList.remove("popup-show-block");
+    }
+  }
+});
 
 // кнопки "Купить"
 for( let i = 0; i < buttonsBuy.length; i++) {
@@ -27,16 +56,10 @@ for( let i = 0; i < buttonsBuy.length; i++) {
 };
 
 // кнопка "Закрыть" окна "Товар добавлен"
-popupShoppingCartCloseButton.addEventListener("click", function(evt) {
-  evt.preventDefault();
-  popupShoppingCart.classList.remove("popup-show-flex");
-});
+setCloseButtonHandler(popupShoppingCart, popupShoppingCartCloseButton);
 
 // кнопка "Продолжить покупки" окна "Товар добавлен"
-continueShoppingButton.addEventListener("click", function(evt) {
-  evt.preventDefault();
-  popupShoppingCart.classList.remove("popup-show-flex");
-});
+setCloseButtonHandler(popupShoppingCart, continueShoppingButton);
 
 // кнопка "Заблудились? Напишите нам" и ссылка обратной связи
 for(let i = 0; i < buttonsWriteUs.length; i++) {
@@ -46,13 +69,47 @@ for(let i = 0; i < buttonsWriteUs.length; i++) {
   });
 }
 
-// кнопка "Закрыть" формы обратной связи
-if(popupFeedback) {
-  popupFeedbackCloseButton = popupFeedback.querySelector(".popup-close-button");
-  popupFeedbackCloseButton.addEventListener("click", function(evt) {
-    evt.preventDefault();
-    popupFeedback.classList.remove("popup-show-flex");
+try {
+  userNameText = localStorage.getItem("user_name");
+  userEmailText = localStorage.getItem("user_email");
+}
+catch (err) {
+  isStorageSupport = false;
+}
+
+// форма обратной связи
+if (popupFeedback) {
+  popupFeedback.focus();
+  feedbackForm = popupFeedback.querySelector("form");
+  feedbackUserName = popupFeedback.querySelector("[id=user_name]");
+  feedbackUserEmail = popupFeedback.querySelector("[id=user_email]");
+  feedbackUserLetter = popupFeedback.querySelector("[id=letter_text]");
+  feedbackUserLetter.focus();
+  if (userEmailText) {
+    feedbackUserEmail.value = userEmailText;
+  }
+  else {
+    feedbackUserEmail.focus();
+  }
+  if (userNameText) {
+    feedbackUserName.value = userNameText;
+  }
+  else {
+    feedbackUserName.focus();
+  }
+  feedbackForm.addEventListener("submit", function (evt) {
+    if (!feedbackUserName || !feedbackUserEmail) {
+      evt.preventDefault();
+    }
+    else {
+      if (isStorageSupport) {
+        localStorage.setItem("user_name", feedbackUserName.value);
+        localStorage.setItem("user_email", feedbackUserEmail.value);
+      }
+    }
   });
+  popupFeedbackCloseButton = popupFeedback.querySelector(".popup-close-button");
+  setCloseButtonHandler(popupFeedback, popupFeedbackCloseButton);
 }
 
 // кнопки "В закладки"
