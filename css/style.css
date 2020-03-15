@@ -592,6 +592,7 @@ input[type="radio"].visually-hidden {
 
 .promo-item a {
   display: inline-block;
+  vertical-align: middle;
   box-sizing: border-box;
   min-width: 135px;
   padding-top: 11px;
