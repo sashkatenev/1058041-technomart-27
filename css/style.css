@@ -311,7 +311,7 @@ input[type="radio"].visually-hidden {
   font-style: italic;
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.44;
+  line-height: 23px;
   color: #ee3643;
 }
 
@@ -329,6 +329,7 @@ input[type="radio"].visually-hidden {
 
   box-sizing: border-box;
   min-width: 270px;
+  min-height: 45px;
   padding-top: 9px;
   padding-bottom: 9px;
   padding-left: 71px;
@@ -465,7 +466,9 @@ input[type="radio"].visually-hidden {
 
 .user-links {
   display: flex;
+  flex-wrap: wrap;
 
+  max-width: 320px;
   padding: 0;
   margin: 0;
   margin-left: 2px;
@@ -476,7 +479,7 @@ input[type="radio"].visually-hidden {
 
 .user-links a {
   font-size: 16px;
-  line-height: 1.13;
+  line-height: 18px;
 
   text-decoration: underline;
 }
@@ -488,7 +491,12 @@ input[type="radio"].visually-hidden {
   margin-right: 15px;
 }
 
-.user-links li:not(:first-child)::before {
+.user-links li:nth-child(n+3) {
+  padding-top: 3px;
+}
+
+/*.user-links li:not(:first-child)::before {*/
+  .user-links li:nth-child(2n)::before {
   content: "";
 
   position: absolute;
