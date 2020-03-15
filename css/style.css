@@ -174,11 +174,9 @@ input[type="radio"].visually-hidden {
   background-color: #161d29;
 }
 
-.search-container {
-  display: flex;
-}
-
 .form-search {
+  display: flex;
+
   flex-grow: 1;
 }
 
@@ -1396,7 +1394,7 @@ input[type="radio"].visually-hidden {
 
 .filter-radio + label::before {
   content: "";
-  
+
   display: inline-block;
   vertical-align: middle;
   width: 17px;
