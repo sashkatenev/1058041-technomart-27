@@ -60,7 +60,7 @@ window.addEventListener("keydown", function (evt) {
 });
 
 // кнопки "Купить"
-for( let i = 0; i < buttonsBuy.length; i++) {
+for (let i = 0; i < buttonsBuy.length; i++) {
   buttonsBuy[i].onclick = function() {
     buttonCart.classList.add("not-empty");
     popupShoppingCart.classList.remove("popup-close");
@@ -75,7 +75,7 @@ setCloseButtonHandler(popupShoppingCart, popupShoppingCartCloseButton);
 setCloseButtonHandler(popupShoppingCart, continueShoppingButton);
 
 // кнопка "Заблудились? Напишите нам" и ссылка обратной связи
-for(let i = 0; i < buttonsWriteUs.length; i++) {
+for (let i = 0; i < buttonsWriteUs.length; i++) {
   buttonsWriteUs[i].addEventListener("click", function(evt) {
     evt.preventDefault();
     popupFeedback.classList.remove("popup-close");
@@ -150,7 +150,7 @@ if (linkMap) {
 }
 
 // кнопки "В закладки"
-for( let i = 0; i < buttonsBookmark.length; i++) {
+for (let i = 0; i < buttonsBookmark.length; i++) {
   buttonsBookmark[i].onclick = function() {
     buttonBookmark.classList.add("not-empty");
   }
@@ -159,7 +159,7 @@ for( let i = 0; i < buttonsBookmark.length; i++) {
 // обработчик ссылок "Войти" и "Выход"
 userNavigationHandler = function(evt) {
   evt.preventDefault();
-  for( let i = 0; i < userNavigationBlocks.length; i++) {
+  for (let i = 0; i < userNavigationBlocks.length; i++) {
     userNavigationBlocks[i].classList.toggle("user-navigation-hidden");
   }
 };
