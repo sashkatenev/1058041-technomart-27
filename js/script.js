@@ -1,3 +1,4 @@
+// список переменных
 let buttonsBuy = document.querySelectorAll(".product-action-buy");
 let buttonCart = document.querySelector(".head-button-cart");
 
