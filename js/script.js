@@ -6,14 +6,17 @@ let buttonBookmark = document.querySelector(".head-button-bookmark");
 
 let userButtonLogin = document.querySelector(".user-button-log-in");
 let userButtonLogout = document.querySelector(".user-button-log-out");
+let linkMap = document.querySelector(".contacts-map");
 let buttonsWriteUs = document.querySelectorAll(".write-us");
 
 let popupShoppingCart = document.querySelector(".popup-shopping-cart");
 let popupFeedback = document.querySelector(".popup-feedback");
+let popupMap = document.querySelector(".popup-map");
 
 let popupShoppingCartCloseButton = popupShoppingCart.querySelector(".popup-close-button");
 let continueShoppingButton = popupShoppingCart.querySelector("[id=continue_shopping]");
 let popupFeedbackCloseButton = null;
+let popupMapCloseButton = null;
 
 let feedbackForm = null;
 let feedbackUserName = null;
@@ -130,6 +133,17 @@ if (popupFeedback) {
   });
   popupFeedbackCloseButton = popupFeedback.querySelector(".popup-close-button");
   setCloseButtonHandler(popupFeedback, popupFeedbackCloseButton);
+}
+
+// форма с картой
+if (linkMap) {
+  linkMap.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popupMap.classList.remove("popup-close");
+    popupMap.classList.add("popup-show-block");
+  });
+  popupMapCloseButton = popupMap.querySelector(".popup-close-button");
+  setCloseButtonHandler(popupMap, popupMapCloseButton);
 }
 
 // кнопки "В закладки"
