@@ -31,8 +31,12 @@ let userNavigationHandler = null;
 function setCloseButtonHandler(popup, btn) {
   btn.addEventListener("click", function(evt) {
     evt.preventDefault();
-    popup.classList.remove("popup-show-flex");
-    popup.classList.remove("popup-show-block");
+    popup.classList.add("popup-close");
+    setTimeout (function () {
+      popup.classList.remove("popup-show-flex");
+      popup.classList.remove("popup-show-block");
+      popup.classList.remove("popup-error");
+    }, 400);
   });
 }
 
@@ -41,8 +45,10 @@ window.addEventListener("keydown", function (evt) {
     evt.preventDefault();
     let popups = document.querySelectorAll(".popup-window");
     for (let i = 0; i < popups.length; i++) {
+      popups[i].classList.add("popup-close");
       popups[i].classList.remove("popup-show-flex");
       popups[i].classList.remove("popup-show-block");
+      popups[i].classList.remove("popup-error");
     }
   }
 });
@@ -51,6 +57,7 @@ window.addEventListener("keydown", function (evt) {
 for( let i = 0; i < buttonsBuy.length; i++) {
   buttonsBuy[i].onclick = function() {
     buttonCart.classList.add("not-empty");
+    popupShoppingCart.classList.remove("popup-close");
     popupShoppingCart.classList.add("popup-show-flex");
   }
 };
@@ -65,7 +72,8 @@ setCloseButtonHandler(popupShoppingCart, continueShoppingButton);
 for(let i = 0; i < buttonsWriteUs.length; i++) {
   buttonsWriteUs[i].addEventListener("click", function(evt) {
     evt.preventDefault();
-      popupFeedback.classList.add("popup-show-flex");
+    popupFeedback.classList.remove("popup-close");
+    popupFeedback.classList.add("popup-show-flex");
   });
 }
 
@@ -79,7 +87,6 @@ catch (err) {
 
 // форма обратной связи
 if (popupFeedback) {
-  popupFeedback.focus();
   feedbackForm = popupFeedback.querySelector("form");
   feedbackUserName = popupFeedback.querySelector("[id=user_name]");
   feedbackUserEmail = popupFeedback.querySelector("[id=user_email]");
@@ -97,9 +104,22 @@ if (popupFeedback) {
   else {
     feedbackUserName.focus();
   }
+
   feedbackForm.addEventListener("submit", function (evt) {
-    if (!feedbackUserName || !feedbackUserEmail) {
+    if (!feedbackUserName.value || !feedbackUserEmail.value || !feedbackUserLetter.value) {
       evt.preventDefault();
+      popupFeedback.classList.remove("popup-error");
+      popupFeedback.offsetWidth = popupFeedback.offsetWidth;
+      popupFeedback.classList.add("popup-error");
+      if (feedbackUserLetter.value == "") {
+        feedbackUserLetter.focus();
+      }
+      if (feedbackUserEmail.value == "") {
+        feedbackUserEmail.focus();
+      }
+      if (feedbackUserName.value == "") {
+          feedbackUserName.focus();
+      }
     }
     else {
       if (isStorageSupport) {
