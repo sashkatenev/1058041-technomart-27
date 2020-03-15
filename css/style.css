@@ -1312,7 +1312,6 @@ input[type="radio"].visually-hidden {
 
 .filter-brands {
   padding-bottom: 22px;
-  /*margin-top: -1px;*/
 }
 
 .filter-brands li:not(:last-child) {
@@ -1326,11 +1325,10 @@ input[type="radio"].visually-hidden {
 
 .filter-brands label,
 .filter-power label {
-
   display: flex;
   align-items: center;
 
-  /*user-select: none;*/
+  user-select: none;
 }
 
 .filter-brands label {
@@ -1381,6 +1379,11 @@ input[type="radio"].visually-hidden {
   outline: 2px solid #ee3643;
 }
 
+.form-filter label:focus {
+  outline: 2px solid #ee3643;
+  outline-offset: 2px;
+}
+
     /* power-filter */
 .filter-power {
   margin-top: -2px;
@@ -1393,7 +1396,9 @@ input[type="radio"].visually-hidden {
 
 .filter-radio + label::before {
   content: "";
-
+  
+  display: inline-block;
+  vertical-align: middle;
   width: 17px;
   height: 17px;
   margin-right: 9px;

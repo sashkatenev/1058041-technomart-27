@@ -26,9 +26,10 @@ let userNameText = "";
 let userEmailText = "";
 let isStorageSupport = true;
 
-let closeButtonHandler = null;
 let userNavigationBlocks = document.querySelectorAll(".user-navigation");
 let userNavigationHandler = null;
+
+let formFilterLabels = document.querySelectorAll(".form-filter label");
 
 
 function setCloseButtonHandler(popup, btn) {
@@ -163,3 +164,15 @@ userNavigationHandler = function(evt) {
 
 userButtonLogin.addEventListener("click", userNavigationHandler);
 userButtonLogout.addEventListener("click", userNavigationHandler);
+
+// фокус на флажках и переключателях
+if (formFilterLabels) {
+  for (let i = 0; i < formFilterLabels.length; i++) {
+    formFilterLabels[i].addEventListener("keydown", function (evt) {
+      if ((evt.keyCode === 13) || (evt.keyCode === 32)) {
+        evt.preventDefault();
+        this.click();
+      }
+    });
+  }
+}
