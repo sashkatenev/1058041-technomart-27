@@ -31,6 +31,8 @@ let userNavigationHandler = null;
 
 let formFilterLabels = document.querySelectorAll(".form-filter label");
 
+let linksCategorySorting = document.querySelectorAll(".sort-bar-byproperty a");
+let linksDirectionSorting = document.querySelectorAll(".sort-bar-bydirection a");
 
 function setCloseButtonHandler(popup, btn) {
   btn.addEventListener("click", function(evt) {
@@ -173,6 +175,33 @@ if (formFilterLabels) {
         evt.preventDefault();
         this.click();
       }
+    });
+  }
+}
+
+// ссылки на панели сортировки
+if (linksCategorySorting) {
+  for (let i = 0; i < linksCategorySorting.length; i++) {
+    linksCategorySorting[i].addEventListener("click", function (evt) {
+      evt.preventDefault();
+      let currentActive = document.querySelector(".sort-bar-byproperty a.sort-property-active");
+      currentActive.classList.remove("sort-property-active");
+      currentActive.setAttribute("href", "#");
+      this.classList.add("sort-property-active");
+      this.removeAttribute("href");
+    });
+  }
+}
+
+if (linksDirectionSorting) {
+  for (let i = 0; i < linksDirectionSorting.length; i++) {
+    linksDirectionSorting[i].addEventListener("click", function (evt) {
+      evt.preventDefault();
+      let currentActive = document.querySelector(".sort-bar-bydirection a.sort-direction-active");
+      currentActive.classList.remove("sort-direction-active");
+      currentActive.setAttribute("href", "#");
+      this.classList.add("sort-direction-active");
+      this.removeAttribute("href");
     });
   }
 }
