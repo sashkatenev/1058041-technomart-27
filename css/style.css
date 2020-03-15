@@ -1172,7 +1172,7 @@ input[type="radio"].visually-hidden {
 .catalog-columns {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
-  line-height: 1.4;
+  line-height: 18px;
   color: #000000;
   
   text-transform: uppercase;
@@ -1449,7 +1449,7 @@ input[type="radio"].visually-hidden {
   /* sort-bar */
 .catalog-sort-bar {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 
   box-sizing: border-box;
   width: 700px;
@@ -1460,19 +1460,21 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-sort-bar {
-  padding-top: 10px;
+  padding-top: 5px;
   padding-right: 18px;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   padding-left: 18px;
 }
 
 .catalog-sort-bar p {
+  padding-top: 5px;
   margin: 0;
-  margin-right: auto;
+  margin-right: 15px;
 }
 
 .catalog-sort-bar ul {
   display: flex;
+  flex-wrap: wrap;
 
   padding: 0;
   margin: 0;
@@ -1482,10 +1484,13 @@ input[type="radio"].visually-hidden {
 
 .catalog-sort-bar li {
   max-width: 130px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .catalog-sort-bar .sort-bar-byproperty {
   margin-right: 47px;
+  margin-left: auto;
 }
 
 .sort-bar-byproperty li:not(:last-child) {
@@ -1510,7 +1515,12 @@ input[type="radio"].visually-hidden {
   color: #ee3643;
 }
 
-.sort-bar-bydirection li:first-child {
+.sort-bar-bydirection {
+  width: 42px;
+  flex-shrink: 0;
+}
+
+.sort-bar-bydirection li:nth-child(2n+1) {
   margin-right: 20px;
 }
 
