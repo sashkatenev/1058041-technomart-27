@@ -35,6 +35,8 @@ let formFilterLabels = document.querySelectorAll(".form-filter label");
 let linksCategorySorting = document.querySelectorAll(".sort-bar-byproperty a");
 let linksDirectionSorting = document.querySelectorAll(".sort-bar-bydirection a");
 
+var serviceSlider = document.querySelector(".service-slider");
+
 function setCloseButtonHandler(popup, btn) {
   btn.addEventListener("click", function(evt) {
     evt.preventDefault();
@@ -172,7 +174,7 @@ userButtonLogout.addEventListener("click", userNavigationHandler);
 if (formFilterLabels) {
   for (let i = 0; i < formFilterLabels.length; i++) {
     formFilterLabels[i].addEventListener("keydown", function (evt) {
-      if ((evt.keyCode === 13) || (evt.keyCode === 32)) {
+      if (evt.keyCode === 13 || evt.keyCode === 32) {
         evt.preventDefault();
         this.click();
       }
@@ -203,6 +205,39 @@ if (linksDirectionSorting) {
       currentActive.setAttribute("href", "#");
       this.classList.add("sort-direction-active");
       this.removeAttribute("href");
+    });
+  }
+}
+
+// сервис-слайдер:
+if (serviceSlider) {
+  // let backgroundImages = ["url('img/delivery.png')", "url('img/guarantee.png')", "url('img/credit.png')"];
+
+  let serviceSliderItems = serviceSlider.querySelectorAll(".service-slider-item");
+  for (let j = 0; j < serviceSliderItems.length; j++) {
+    serviceSliderItems[j].setAttribute("data-number", j);
+  }
+
+  let serviceSliderControls = serviceSlider.querySelectorAll(".service-slider-controls p");
+  for (let i = 0; i < serviceSliderControls.length; i++) {
+    serviceSliderControls[i].setAttribute("data-number", i);
+    serviceSliderControls[i].addEventListener("click", function (evt) {
+      let currentNameActive = serviceSlider.querySelector(".service-slider-controls .name-item-active");
+      currentNameActive.removeAttribute("class");
+      this.classList.add("name-item-active");
+
+      let sliderItemActive = serviceSlider.querySelector(".slider-item-active");
+      sliderItemActive.classList.remove("slider-item-active");
+      serviceSlider.querySelector(".service-slider-item[data-number='" + this.dataset.number + "']").classList.add("slider-item-active");
+
+      // serviceSlider.querySelector(".service-slider-list").style.backgroundImage = backgroundImages[i];
+    });
+
+    serviceSliderControls[i].addEventListener("keydown", function (evt) {
+      if (evt.keyCode === 13 || evt.keyCode === 32) {
+        evt.preventDefault();
+        this.click();
+      }
     });
   }
 }
