@@ -104,17 +104,15 @@
 
           <div class="promo-slider">
             <h2 class="visually-hidden">Слайдер</h2>
-            <input class="slider-check slider-check01" type="radio" id="promo_check_01" name="slider_check">
-            <input class="slider-check slider-check02" type="radio" id="promo_check_02" name="slider_check" checked>
-            <ul class="promo-slide-list">
-              <li class="promo-slide">
+            <ul class="promo-slider-list">
+              <li class="promo-slider-item">
                 <div class="slide-description">
                   <h3>Перфораторы</h3>
                   <p>Настоящие мужские игрушки</p>
                 </div>
                 <img src="img/slide-01.jpg" alt="Изображение перфоратора" width="620" height="266">
               </li>
-              <li class="promo-slide">
+              <li class="promo-slider-item slider-item-active">
                 <div class="slide-description">
                   <h3>Дрели</h3>
                   <p>Соседям на радость!</p>
@@ -122,12 +120,9 @@
                 <img src="img/slide-02.jpg" alt="Изображение дрели" width="620" height="266">
               </li>
             </ul>
-            <div class="slider-controls">
-              <label for="promo_check_01" aria-label="Переключатель первого слайда"></label>
-              <label for="promo_check_02" aria-label="Переключатель второго слайда"></label>
-            </div>
-            <button class="slider-button" id="btn-left" type="button" aria-label="К предыдущему слайду"></button>
-            <button class="slider-button" id="btn-right" type="button" aria-label="К следующему слайду"></button>
+            <div class="slider-pointers"></div>
+            <button class="slider-arrow arrow-prev" type="button" data-step="-1" aria-label="К предыдущему слайду"></button>
+            <button class="slider-arrow arrow-next" type="button" data-step="1" aria-label="К следующему слайду"></button>
             <a class="site-button" href="catalog.html">Открыть каталог</a>
           </div>
         </section>

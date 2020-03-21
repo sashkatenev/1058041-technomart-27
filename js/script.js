@@ -36,6 +36,7 @@ let linksCategorySorting = document.querySelectorAll(".sort-bar-byproperty a");
 let linksDirectionSorting = document.querySelectorAll(".sort-bar-bydirection a");
 
 var serviceSlider = document.querySelector(".service-slider");
+var promoSlider = document.querySelector(".promo-slider");
 
 function setCloseButtonHandler(popup, btn) {
   btn.addEventListener("click", function(evt) {
@@ -238,6 +239,46 @@ if (serviceSlider) {
         evt.preventDefault();
         this.click();
       }
+    });
+  }
+}
+
+// промослайдер:
+if (promoSlider) {
+  let promoSliderItems = promoSlider.querySelectorAll(".promo-slider-item");
+  for (let i = 0; i < promoSliderItems.length; i++) {
+    promoSliderItems[i].setAttribute("data-number", i);
+    let newPointer = document.createElement("a");
+    newPointer.setAttribute("data-number", i);
+    newPointer.setAttribute("aria-label", "Переключатель слайда номер " + (i+1));
+    if (promoSliderItems[i].classList.contains("slider-item-active")) {
+      newPointer.classList.add("slider-pointer-active");
+    }
+    else {
+      newPointer.setAttribute("href", "#");
+    }
+    newPointer.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      let activePointer = promoSlider.querySelector(".slider-pointer-active");
+      activePointer.classList.remove("slider-pointer-active");
+      activePointer.setAttribute("href", "#");
+      this.classList.add("slider-pointer-active");
+      this.removeAttribute("href");
+      promoSlider.querySelector(".slider-item-active").classList.remove("slider-item-active");
+      promoSlider.querySelector(".promo-slider-item[data-number='" + this.dataset.number + "']").classList.add("slider-item-active");
+    });
+    promoSlider.querySelector(".slider-pointers").appendChild(newPointer);
+  }
+
+  // стрелки < и >:
+  let arrows = promoSlider.querySelectorAll(".slider-arrow");
+  for (let i = 0; i < arrows.length; i++) {
+    arrows[i].addEventListener("click", function () {
+      let activePointer = promoSlider.querySelector(".slider-pointer-active");
+      let current = +activePointer.dataset.number;
+      let step = +this.dataset.step;
+      let n = promoSlider.querySelectorAll(".promo-slider-item").length;
+      promoSlider.querySelector(".slider-pointers a[data-number='" + ((current + step + n) % n) + "']").click();
     });
   }
 }
