@@ -37,6 +37,7 @@ let linksDirectionSorting = document.querySelectorAll(".sort-bar-bydirection a")
 
 var serviceSlider = document.querySelector(".service-slider");
 var promoSlider = document.querySelector(".promo-slider");
+var priceSlider = document.querySelector(".price-slider");
 
 function setCloseButtonHandler(popup, btn) {
   btn.addEventListener("click", function(evt) {
@@ -281,4 +282,8 @@ if (promoSlider) {
       promoSlider.querySelector(".slider-pointers a[data-number='" + ((current + step + n) % n) + "']").click();
     });
   }
+}
+
+if (priceSlider) {
+  
 }

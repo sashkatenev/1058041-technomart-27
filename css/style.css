@@ -1233,10 +1233,10 @@ input[type="radio"].visually-hidden {
   background-color: #00ca74;
 }
 
-.range-track-pin {
+.range-pin {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 5px;
   
   width: 20px;
   height: 22px;
@@ -1248,7 +1248,7 @@ input[type="radio"].visually-hidden {
   background-position: 50% 50%;
 }
 
-.track-pin-max {
+.pin-max {
   top: 0;
   left: 140px;
 }
