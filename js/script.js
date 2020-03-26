@@ -285,5 +285,40 @@ if (promoSlider) {
 }
 
 if (priceSlider) {
-  
+  let leftPin = priceSlider.querySelector(".pin-min");
+  let rightPin = priceSlider.querySelector(".pin-max");
+
+  function isAllowShift(myNewLeftPosition, partner) {
+    let allow = true;
+    if ((myNewLeftPosition < 0) || (myNewLeftPosition > 180 - 20) || Math.abs(myNewLeftPosition - partner.offsetLeft) < 20) {
+      allow = false;
+    }
+    return allow;
+  }
+
+  leftPin.minPosition = 0;
+  leftPin.maxPosition = rightPin.offsetLeft;
+  leftPin.partner = rightPin;
+
+  rightPin.minPosition = leftPin.offsetLeft + 20;
+  leftPin.maxPosition = 160;
+  rightPin.partner = leftPin;
+
+  function sliderPinKeydownHandler(evt) {
+    evt.preventDefault();
+    // let parentWidth = priceSlider.querySelector(".range-bar");
+    if (evt.keyCode === 37) {
+      if (isAllowShift(this.offsetLeft - 1, this.partner)) {
+        this.style.left = this.offsetLeft - 1 + "px";
+      }
+    }
+    if (evt.keyCode === 39) {
+      if (isAllowShift(this.offsetLeft + 1, this.partner)) {
+        this.style.left = this.offsetLeft + 1 + "px";
+      }
+    }
+    
+  }
+  leftPin.addEventListener("keydown", sliderPinKeydownHandler);
+  rightPin.addEventListener("keydown", sliderPinKeydownHandler);
 }
