@@ -285,16 +285,9 @@ if (promoSlider) {
 }
 
 if (priceSlider) {
+  let rangeLine = priceSlider.querySelector(".range-line-selected");
   let leftPin = priceSlider.querySelector(".pin-min");
   let rightPin = priceSlider.querySelector(".pin-max");
-
-  function isAllowShift(myNewLeftPosition, partner) {
-    let allow = true;
-    if ((myNewLeftPosition < 0) || (myNewLeftPosition > 180 - 20) || Math.abs(myNewLeftPosition - partner.offsetLeft) < 20) {
-      allow = false;
-    }
-    return allow;
-  }
 
   leftPin.minPosition = 0;
   leftPin.maxPosition = rightPin.offsetLeft;
@@ -304,20 +297,34 @@ if (priceSlider) {
   leftPin.maxPosition = 160;
   rightPin.partner = leftPin;
 
+  function isAllowShift(myNewLeftPosition, partner) {
+    let allow = true;
+    if ((myNewLeftPosition < 0) || (myNewLeftPosition > 180 - 20) || Math.abs(myNewLeftPosition - partner.offsetLeft) < 20) {
+      allow = false;
+    }
+    return allow;
+  }
+
+  function setIndicatorLine() {
+    rangeLine.style.left = leftPin.offsetLeft + 10 + "px";
+    rangeLine.style.width = rightPin.offsetLeft - leftPin.offsetLeft + "px";
+  }
+
   function sliderPinKeydownHandler(evt) {
-    evt.preventDefault();
     // let parentWidth = priceSlider.querySelector(".range-bar");
     if (evt.keyCode === 37) {
+      evt.preventDefault();
       if (isAllowShift(this.offsetLeft - 1, this.partner)) {
         this.style.left = this.offsetLeft - 1 + "px";
       }
     }
     if (evt.keyCode === 39) {
+      evt.preventDefault();
       if (isAllowShift(this.offsetLeft + 1, this.partner)) {
         this.style.left = this.offsetLeft + 1 + "px";
       }
     }
-    
+    setIndicatorLine();
   }
   leftPin.addEventListener("keydown", sliderPinKeydownHandler);
   rightPin.addEventListener("keydown", sliderPinKeydownHandler);
